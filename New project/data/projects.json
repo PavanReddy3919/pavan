@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "omni-directional-treadmill",
+    "title": "Omni-Directional Treadmill",
+    "tag": "Product Design",
+    "summary": "Developed a VR-integrated omni-directional treadmill to improve rehabilitation outcomes with precise, multi-axis motion.",
+    "detail": "Designed the mechanical architecture and motion platform, focusing on repeatable movement, reliability, and user safety. Emphasized efficiency across drivetrain, structure, and integration with VR systems.",
+    "link": "project.html?slug=omni-directional-treadmill"
+  },
+  {
+    "slug": "rumifico-sharing-memories",
+    "title": "Rumifico — Sharing Memories",
+    "tag": "Human-Centered",
+    "summary": "Collaborated with HP mentors to engineer a device that strengthens connections between parents and college-bound children.",
+    "detail": "Focused on emotional connection and usability, translating user needs into a tangible experience that supports long-distance relationships.",
+    "link": "project.html?slug=rumifico-sharing-memories"
+  },
+  {
+    "slug": "oxygen-concentrator",
+    "title": "Oxygen Concentrator",
+    "tag": "Medical Device",
+    "summary": "Designed an oxygen concentrator using PSA technology with attention to functionality, space, and aesthetics through DFMA principles.",
+    "detail": "Optimized mechanical layout, airflow, and serviceability to improve efficiency and reduce footprint while meeting production constraints.",
+    "link": "project.html?slug=oxygen-concentrator"
+  },
+  {
+    "slug": "psa-oxygen-plant",
+    "title": "PSA Oxygen Plant",
+    "tag": "Operations",
+    "summary": "Managed a 40+ member team to deliver a PSA oxygen plant, including non-destructive and pneumatic pressure vessel tests.",
+    "detail": "Coordinated cross-functional teams and validation activities to ensure safe, on-time delivery of a full-scale oxygen plant system.",
+    "link": "project.html?slug=psa-oxygen-plant"
+  },
+  {
+    "slug": "gravitational-effects-boiling-ml",
+    "title": "Gravitational Effects on Boiling (ML)",
+    "tag": "Research",
+    "summary": "Studied gravity and Marangoni effects on boiling heat transfer using machine learning and genetic algorithms.",
+    "detail": "Modeled water/2-propanol mixtures across varying gravitational conditions to identify optimized heat transfer behavior.",
+    "link": "project.html?slug=gravitational-effects-boiling-ml"
+  },
+  {
+    "slug": "solar-pv-cell-optimization",
+    "title": "Solar PV Cell Optimization",
+    "tag": "Energy",
+    "summary": "Built a neural network model to optimize PV cell organization for improved system performance.",
+    "detail": "Validated the model with data and evaluated power output to identify best-performing cell combinations.",
+    "link": "project.html?slug=solar-pv-cell-optimization"
+  },
+  {
+    "slug": "boiler-performance-ml",
+    "title": "Boiler Performance Modeling",
+    "tag": "Thermal",
+    "summary": "Developed neural network models to predict boiler performance in solar thermal power plants.",
+    "detail": "Trained models on real-world data for vertical tube boiling at 4.0 MPa and evaluated operating parameter impacts.",
+    "link": "project.html?slug=boiler-performance-ml"
+  },
+  {
+    "slug": "fsi-arterial-model",
+    "title": "FSI Study of Arterial Model",
+    "tag": "Simulation",
+    "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
+    "detail": "Demonstrated how SimVascular can replace costly proprietary workflows for research and education.",
+    "link": "project.html?slug=fsi-arterial-model"
+  },
+  {
+    "slug": "turbine-blade-heat-transfer",
+    "title": "Turbine Blade Heat Transfer Analysis",
+    "tag": "Aero-Thermal",
+    "summary": "Analyzed heat transfer in turbine blades via modeling and experiments on an E423 airfoil.",
+    "detail": "Investigated design optimization opportunities to improve thermal efficiency under varying operating conditions.",
+    "link": "project.html?slug=turbine-blade-heat-transfer"
+  },
+  {
+    "slug": "engine-efficiency-thermal-design",
+    "title": "Engine Efficiency Through Thermal Design",
+    "tag": "Mechanical",
+    "summary": "Designed a 6-cylinder radial pneumatic engine and improved efficiency through thermal-volume optimization.",
+    "detail": "Modeled the engine in Autodesk Inventor and applied thermal mechanics to refine cylinder head geometry.",
+    "link": "project.html?slug=engine-efficiency-thermal-design"
+  }
+]

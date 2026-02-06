@@ -1,0 +1,23 @@
+[
+  {
+    "role": "Mechanical Engineer (R&D)",
+    "company": "Biosphere",
+    "period": "Jul 2023 — Present",
+    "summary": "Led CAD/DFMA, tolerance analysis, and validation for novel UV technology, driving reliability test plans and supplier collaboration that reduced system CAPEX by 35%.",
+    "link": "project.html?slug=oxygen-concentrator"
+  },
+  {
+    "role": "Product Design Engineer",
+    "company": "BlueGoji",
+    "period": "May 2021 — Nov 2022",
+    "summary": "Designed mechanical architecture for a multidirectional motion platform, cutting size by 47% and weight by 34% through structural optimization and testing.",
+    "link": "project.html?slug=omni-directional-treadmill"
+  },
+  {
+    "role": "Mechanical Design Engineer",
+    "company": "Dynaxcel Engineers",
+    "period": "Jun 2021 — Dec 2021",
+    "summary": "Optimized oxygen concentrator mechanics and airflow, improving compressor efficiency by 13% and reducing exhaust re-entry by 70%.",
+    "link": "project.html?slug=oxygen-concentrator"
+  }
+]
