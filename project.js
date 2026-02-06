@@ -72,23 +72,28 @@ const renderProject = (project) => {
 
   if (Array.isArray(project.gallery) && project.gallery.length > 0) {
     const total = project.gallery.length;
+    const isStatic = total <= 3;
+    const tiles = project.gallery.map((item, index) => {
+      const src = encodeURI(item.src);
+      const caption = normalizeCaption(item.caption || item.src);
+      const offset = index % 2 === 0 ? "-16px" : "12px";
+      return `
+        <figure class="gallery-item" style="--offset:${offset}">
+          <img src="${src}" alt="${caption}" />
+          <figcaption>${caption}</figcaption>
+        </figure>
+      `;
+    });
+
+    const trackTiles = isStatic ? tiles.join("") : `${tiles.join("")}${tiles.join("")}`;
+    const modeClass = isStatic ? "gallery static" : "gallery marquee";
+
     content += `
-      <section class="gallery">
+      <section class="${modeClass}">
         <h3>Gallery</h3>
-        <div class="globe">
-          <div class="globe-orbit" style="--total:${total}">
-            ${project.gallery
-              .map((item, index) => {
-                const src = encodeURI(item.src);
-                const caption = normalizeCaption(item.caption || item.src);
-                return `
-                  <figure class="globe-item" style="--i:${index}">
-                    <img src="${src}" alt="${caption}" />
-                    <figcaption>${caption}</figcaption>
-                  </figure>
-                `;
-              })
-              .join("")}
+        <div class="gallery-viewport">
+          <div class="gallery-track">
+            ${trackTiles}
           </div>
         </div>
       </section>

@@ -40,7 +40,7 @@ const renderTimeline = (items) => {
     .map((item, index) => {
       const side = index % 2 === 0 ? "left" : "right";
       return `
-        <article class="timeline-card ${side}" data-link="${item.link}">
+        <article class="timeline-card ${side}">
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
@@ -90,6 +90,34 @@ const setupModalEvents = () => {
   });
 };
 
+const setupTimelineFocus = () => {
+  const cards = Array.from(document.querySelectorAll(".timeline-card"));
+  if (!cards.length) return;
+
+  const updateActive = () => {
+    const midpoint = window.innerHeight / 2;
+    let closest = null;
+    let closestDistance = Infinity;
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const cardMid = rect.top + rect.height / 2;
+      const distance = Math.abs(cardMid - midpoint);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closest = card;
+      }
+    });
+
+    cards.forEach((card) => {
+      card.classList.toggle("is-active", card === closest);
+    });
+  };
+
+  updateActive();
+  window.addEventListener("scroll", () => requestAnimationFrame(updateActive), { passive: true });
+  window.addEventListener("resize", () => requestAnimationFrame(updateActive));
+};
+
 const setupMarquee = () => {
   document.querySelectorAll(".marquee-row").forEach((row) => {
     row.innerHTML = `${row.innerHTML}${row.innerHTML}`;
@@ -100,6 +128,7 @@ const init = async () => {
   setupScrollButtons();
   setupModalEvents();
   setupMarquee();
+  setupTimelineFocus();
 
   try {
     const [projects, timeline] = await Promise.all([
@@ -122,14 +151,6 @@ const init = async () => {
     }
   });
 
-  timelineGrid?.addEventListener("click", (event) => {
-    const card = event.target.closest(".timeline-card");
-    if (!card) return;
-    const link = card.dataset.link;
-    if (link) {
-      window.location.href = link;
-    }
-  });
 };
 
 init();
