@@ -75,12 +75,10 @@ const renderProject = (project) => {
     const isStatic = total <= 3;
     const tiles = project.gallery.map((item, index) => {
       const src = encodeURI(item.src);
-      const caption = normalizeCaption(item.caption || item.src);
       const offset = index % 2 === 0 ? "-16px" : "12px";
       return `
         <figure class="gallery-item" style="--offset:${offset}">
-          <img src="${src}" alt="${caption}" />
-          <figcaption>${caption}</figcaption>
+          <img src="${src}" alt="Project image" />
         </figure>
       `;
     });

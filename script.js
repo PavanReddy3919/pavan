@@ -1,10 +1,5 @@
 const projectGrid = document.getElementById("project-grid");
 const timelineGrid = document.getElementById("timeline-grid");
-const modal = document.getElementById("project-modal");
-const modalTitle = document.getElementById("modal-title");
-const modalSummary = document.getElementById("modal-summary");
-const modalLink = document.getElementById("modal-link");
-
 const state = {
   projects: [],
 };
@@ -40,7 +35,7 @@ const renderTimeline = (items) => {
     .map((item, index) => {
       const side = index % 2 === 0 ? "left" : "right";
       return `
-        <article class="timeline-card ${side}">
+        <article class="timeline-card ${side}" style="--row:${index + 1}">
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
@@ -51,17 +46,6 @@ const renderTimeline = (items) => {
     .join("");
 };
 
-const openModal = (project) => {
-  modalTitle.textContent = project.title;
-  modalSummary.textContent = project.detail || project.summary;
-  modalLink.href = project.link;
-  modal.setAttribute("aria-hidden", "false");
-};
-
-const closeModal = () => {
-  modal.setAttribute("aria-hidden", "true");
-};
-
 const setupScrollButtons = () => {
   document.querySelectorAll("[data-scroll]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -70,23 +54,6 @@ const setupScrollButtons = () => {
         target.scrollIntoView({ behavior: "smooth" });
       }
     });
-  });
-};
-
-const setupModalEvents = () => {
-  if (!modal) return;
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.querySelector(".modal-close")?.addEventListener("click", closeModal);
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeModal();
-    }
   });
 };
 
@@ -126,7 +93,6 @@ const setupMarquee = () => {
 
 const init = async () => {
   setupScrollButtons();
-  setupModalEvents();
   setupMarquee();
   setupTimelineFocus();
 
@@ -147,7 +113,7 @@ const init = async () => {
     if (!card) return;
     const project = state.projects.find((item) => item.slug === card.dataset.slug);
     if (project) {
-      openModal(project);
+      window.location.href = project.link;
     }
   });
 
