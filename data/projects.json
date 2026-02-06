@@ -30,7 +30,7 @@
     ],
     "gallery": [
       {
-        "src": "assets/blue goji.png",
+        "src": "assets/blue-goji.png",
         "caption": "blue goji"
       }
     ]
@@ -62,16 +62,16 @@
     ],
     "gallery": [
       {
-        "src": "assets/hp logo for rumifico.jpg",
+        "src": "assets/jacob-institute-logo-for-rumifico.png",
+        "caption": "jacob institute logo for rumifico"
+      },
+      {
+        "src": "assets/hp-logo-for-rumifico.jpg",
         "caption": "hp logo for rumifico"
       },
       {
-        "src": "assets/rumifico logo .png",
+        "src": "assets/rumifico-logo.png",
         "caption": "rumifico logo"
-      },
-      {
-        "src": "assets/jacob institute logo for rumifico .png",
-        "caption": "jacob institute logo for rumifico"
       }
     ]
   },
@@ -114,36 +114,36 @@
     ],
     "gallery": [
       {
-        "src": "assets/oxygen concentrator 2.png",
-        "caption": "oxygen concentrator 2"
+        "src": "assets/oxygen-concentrator.jpg",
+        "caption": "oxygen concentrator"
       },
       {
-        "src": "assets/oxygen concentrator 3.png",
-        "caption": "oxygen concentrator 3"
+        "src": "assets/oxygen-concentrator.png",
+        "caption": "oxygen concentrator"
       },
       {
-        "src": "assets/oxygen concentrator 1.png",
-        "caption": "oxygen concentrator 1"
-      },
-      {
-        "src": "assets/oxygen concentrator 4.png",
-        "caption": "oxygen concentrator 4"
-      },
-      {
-        "src": "assets/oxygen concentrator 5.png",
+        "src": "assets/oxygen-concentrator-5.png",
         "caption": "oxygen concentrator 5"
       },
       {
-        "src": "assets/oxygen concentrator.png",
-        "caption": "oxygen concentrator"
+        "src": "assets/oxygen-concentrator-4.png",
+        "caption": "oxygen concentrator 4"
       },
       {
-        "src": "assets/oxygen concentrator.jpg",
-        "caption": "oxygen concentrator"
+        "src": "assets/oxygen-concentrator-6.png",
+        "caption": "oxygen concentrator 6"
       },
       {
-        "src": "assets/oxygen concentrator .png",
-        "caption": "oxygen concentrator"
+        "src": "assets/oxygen-concentrator-3.png",
+        "caption": "oxygen concentrator 3"
+      },
+      {
+        "src": "assets/oxygen-concentrator-2.png",
+        "caption": "oxygen concentrator 2"
+      },
+      {
+        "src": "assets/oxygen-concentrator-1.png",
+        "caption": "oxygen concentrator 1"
       }
     ]
   },
@@ -174,20 +174,20 @@
     ],
     "gallery": [
       {
-        "src": "assets/psa oxygen plant 3.png",
-        "caption": "psa oxygen plant 3"
+        "src": "assets/psa-oxygen-plant.png",
+        "caption": "psa oxygen plant"
       },
       {
-        "src": "assets/psa oxygen plant 2.png",
+        "src": "assets/psa-oxygent-plant.jpg",
+        "caption": "psa oxygent plant"
+      },
+      {
+        "src": "assets/psa-oxygen-plant-2.png",
         "caption": "psa oxygen plant 2"
       },
       {
-        "src": "assets/PSA oxygent plant.jpg",
-        "caption": "PSA oxygent plant"
-      },
-      {
-        "src": "assets/psa oxygen plant.png",
-        "caption": "psa oxygen plant"
+        "src": "assets/psa-oxygen-plant-3.png",
+        "caption": "psa oxygen plant 3"
       }
     ]
   },
@@ -296,11 +296,11 @@
     ],
     "gallery": [
       {
-        "src": "assets/make it logo .png",
+        "src": "assets/make-it-logo.png",
         "caption": "make it logo"
       },
       {
-        "src": "assets/jacobs institute logo for make it .png",
+        "src": "assets/jacobs-institute-logo-for-make-it.png",
         "caption": "jacobs institute logo for make it"
       }
     ]
