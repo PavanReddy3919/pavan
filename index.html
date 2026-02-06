@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavan M. Reddy | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo">Pavan M. Reddy</div>
+        <nav class="nav">
+          <a href="#summary">Summary</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="cta" data-scroll="#projects">View Work</button>
+      </header>
+
+      <main>
+        <section id="summary" class="hero">
+          <div class="hero-text">
+            <p class="eyebrow">Mechanical Engineer • Product Design • R&amp;D</p>
+            <h1>I build production-ready hardware systems from concept to validation.</h1>
+            <p class="lead">
+              I am a mechanical engineer with 5+ years of experience driving end-to-end product development, from
+              concept and design through prototyping, validation, and production. I have led R&amp;D programs for
+              early-stage startups and DOD initiatives, making clear engineering trade-offs to deliver robust,
+              manufacturable systems.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-scroll="#projects">Explore Projects</button>
+              <a class="secondary" href="#contact">Get in touch</a>
+            </div>
+            <div class="stats">
+              <div>
+                <h3>5+</h3>
+                <p>Years in product development</p>
+              </div>
+              <div>
+                <h3>3+</h3>
+                <p>Cross-functional teams led</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-photo">
+            <div class="skills-marquee">
+              <div class="marquee-row marquee-one">
+                <span>SolidWorks</span>
+                <span>CATIA</span>
+                <span>Onshape</span>
+                <span>Fusion 360</span>
+                <span>Autodesk Inventor</span>
+                <span>Shaper 3D</span>
+                <span>ANSYS</span>
+                <span>Ansys Workbench</span>
+                <span>ParaView</span>
+                <span>Simscale</span>
+                <span>FEM</span>
+                <span>GD&amp;T</span>
+                <span>DFMA</span>
+                <span>Sheet Metal Design</span>
+                <span>CNC</span>
+                <span>3D Printing</span>
+                <span>Rapid Prototyping</span>
+                <span>Wood Shop</span>
+                <span>Metal Shop</span>
+              </div>
+              <div class="marquee-row marquee-two">
+                <span>C</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>TensorFlow</span>
+                <span>Matplotlib</span>
+                <span>Scikit-learn</span>
+                <span>Keras</span>
+                <span>Microsoft Word</span>
+                <span>Microsoft Excel</span>
+                <span>PowerPoint</span>
+                <span>Design of Experiments</span>
+                <span>Root Cause Analysis</span>
+              </div>
+            </div>
+            <div class="photo-frame">
+              <img src="assets/headshot.jpg" alt="Portrait of Pavan M. Reddy" />
+            </div>
+          </div>
+        </section>
+
+        <section id="timeline" class="timeline">
+          <div class="section-title">
+            <h2>Professional Timeline</h2>
+            <p>A focused path of impact, learning, and high-velocity product work.</p>
+          </div>
+          <div id="timeline-grid" class="timeline-grid"></div>
+        </section>
+
+        <section id="projects" class="projects">
+          <div class="section-title">
+            <h2>Selected Projects</h2>
+            <p>Collection of work spanning physical products, simulations, and applied research.</p>
+          </div>
+          <div id="project-grid" class="project-grid"></div>
+        </section>
+
+        <section id="contact" class="contact">
+          <div>
+            <h2>Let’s build something precise and beautiful.</h2>
+            <p>Email: <a href="mailto:pavan.reddy@berkeley.edu">pavan.reddy@berkeley.edu</a></p>
+          </div>
+          <button class="primary" data-scroll="#summary">Back to top</button>
+        </section>
+      </main>
+    </div>
+
+    <div id="project-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">×</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-summary"></p>
+        <a id="modal-link" href="project.html" class="secondary">Open full case study</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
