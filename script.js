@@ -28,7 +28,6 @@ const renderProjects = (projects) => {
             <h3>${project.title}</h3>
             <p>${project.summary}</p>
           </div>
-          <span class="tag">View details</span>
         </article>
       `
     )
@@ -38,16 +37,17 @@ const renderProjects = (projects) => {
 const renderTimeline = (items) => {
   if (!timelineGrid) return;
   timelineGrid.innerHTML = items
-    .map(
-      (item) => `
-        <article class="timeline-card" data-link="${item.link}">
+    .map((item, index) => {
+      const side = index % 2 === 0 ? "left" : "right";
+      return `
+        <article class="timeline-card ${side}" data-link="${item.link}">
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
           <p>${item.summary}</p>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
 };
 

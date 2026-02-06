@@ -4,32 +4,192 @@
     "title": "Omni-Directional Treadmill",
     "tag": "Product Design",
     "summary": "Developed a VR-integrated omni-directional treadmill to improve rehabilitation outcomes with precise, multi-axis motion.",
-    "detail": "Designed the mechanical architecture and motion platform, focusing on repeatable movement, reliability, and user safety. Emphasized efficiency across drivetrain, structure, and integration with VR systems.",
-    "link": "project.html?slug=omni-directional-treadmill"
+    "detail": "Objective: Build a compact, multi-directional treadmill using omni wheels and control logic that keeps users centered at all times, in collaboration with Blue Goji.",
+    "link": "project.html?slug=omni-directional-treadmill",
+    "sections": [
+      {
+        "title": "Project Objective",
+        "body": "Design a multi-directional treadmill using omni wheels so a user can move freely in any direction within a fixed space. The goal was to reduce the size of the existing prototype while adding a control system to keep the user centered. This was done with Blue Goji to improve physical and brain health."
+      },
+      {
+        "title": "Principle",
+        "body": "A single-motor treadmill enables infinite motion in one direction. By combining two motors, motion can be produced in two axes. With the right motor speed variations, any 2D planar motion can be achieved."
+      },
+      {
+        "title": "Approach",
+        "body": "We focused on downsizing without sacrificing efficiency or integrity. After multiple iterations over three months, we redesigned the drive system, reduced height by 44%, and increased safety factor using stress-concentrator analysis and topological optimization."
+      },
+      {
+        "title": "Contribution",
+        "body": "I led the product design team, modified one drive system, and supported other sub-teams with FEA, rapid prototyping, proof-of-concept builds, and fabrication. I completed the full assembly in SOLIDWORKS, ran structural analysis on the platform, and contributed to fabrication, testing, and final assembly. The work culminated in a presentation at the Fung Institute Capstone Showcase."
+      },
+      {
+        "title": "Note",
+        "body": "Specifics are withheld due to NDA restrictions."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/blue goji.png",
+        "caption": "blue goji"
+      }
+    ]
   },
   {
     "slug": "rumifico-sharing-memories",
-    "title": "Rumifico — Sharing Memories",
+    "title": "Rumifico \u2014 Sharing Memories",
     "tag": "Human-Centered",
     "summary": "Collaborated with HP mentors to engineer a device that strengthens connections between parents and college-bound children.",
-    "detail": "Focused on emotional connection and usability, translating user needs into a tangible experience that supports long-distance relationships.",
-    "link": "project.html?slug=rumifico-sharing-memories"
+    "detail": "Human-centered design project with HP and a Google UX designer to reconnect parents and college students through shared memories.",
+    "link": "project.html?slug=rumifico-sharing-memories",
+    "sections": [
+      {
+        "title": "Overview",
+        "body": "Rumifico is a nostalgic, 21st\u2011century pager designed to help parents and kids who have moved out for college stay connected through shared memories."
+      },
+      {
+        "title": "Collaboration",
+        "body": "We worked alongside HP and a Google UI/UX designer, applying human\u2011centered design to turn a meaningful connection gap into a tangible product concept."
+      },
+      {
+        "title": "Recognition",
+        "body": "The project won the Best Overall Award at the UC Berkeley College of Engineering Jacobs Showcase 2022."
+      },
+      {
+        "title": "Project Link",
+        "body": "https://www.behance.net/gallery/159089991/RUMIFICO-SHARING-MEMORIES/modules/897669701"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/hp logo for rumifico.jpg",
+        "caption": "hp logo for rumifico"
+      },
+      {
+        "src": "assets/rumifico logo .png",
+        "caption": "rumifico logo"
+      },
+      {
+        "src": "assets/jacob institute logo for rumifico .png",
+        "caption": "jacob institute logo for rumifico"
+      }
+    ]
   },
   {
     "slug": "oxygen-concentrator",
     "title": "Oxygen Concentrator",
     "tag": "Medical Device",
     "summary": "Designed an oxygen concentrator using PSA technology with attention to functionality, space, and aesthetics through DFMA principles.",
-    "detail": "Optimized mechanical layout, airflow, and serviceability to improve efficiency and reduce footprint while meeting production constraints.",
-    "link": "project.html?slug=oxygen-concentrator"
+    "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5\u20138 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
+    "link": "project.html?slug=oxygen-concentrator",
+    "sections": [
+      {
+        "title": "Mission",
+        "body": "This project supported the Government of India\u2019s effort to solve the medical-grade oxygen shortage during COVID-19. We targeted a low-cost, compact PSA concentrator (25 LPM) for small to mid-size hospitals, designed as a miniature counterpart to on-site PSA plants."
+      },
+      {
+        "title": "Principle",
+        "body": "Pressure Swing Adsorption (PSA) uses synthetic zeolite sieves to adsorb nitrogen at high pressure, releasing oxygen. Two sieve beds alternate between pressurization and depressurization to maintain a continuous oxygen flow."
+      },
+      {
+        "title": "Timeline of Work",
+        "body": "We began by modeling PSA valve timing and scaling from a 225 LPM plant to a 25 LPM concentrator. After simulations, we built a prototype to validate parameters while parallelizing enclosure and system layout design. Vendor manufacturing handled pressure vessels, allowing us to focus on assembly speed, cost, and serviceability."
+      },
+      {
+        "title": "Design & Validation",
+        "body": "As one of two Product Design leads, I iterated the framework around constraints including size, weight, materials, aesthetics, electronics placement, mobility, airflow, and serviceability. Designs were reviewed with the engineering team and client and approved by the Technical Director."
+      },
+      {
+        "title": "Key Contribution \u2014 Closure System",
+        "body": "To avoid welded thin sheet metal and exposed sharp edges, I developed a manufacturable closure system inspired by everyday mechanisms (CPU slide panels, angled screws in wood frames, and generator enclosures). This enabled safe, repeatable assembly for mass production."
+      },
+      {
+        "title": "Key Contribution \u2014 Spring Plate Fix",
+        "body": "Testing revealed a small air gap at the top dish end plate that could grow over time as zeolite granules moved under cyclic pressure, increasing wear. After evaluating alternatives, I designed a compressed spring plate with seven springs to eliminate the gap as it formed. This prevented granule wear, improved efficiency, and was adopted in both projects."
+      },
+      {
+        "title": "Impact",
+        "body": "The project was recognized by community leaders, including the Honorable central minister and regional hospitals, for its contribution during the crisis."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/oxygen concentrator 2.png",
+        "caption": "oxygen concentrator 2"
+      },
+      {
+        "src": "assets/oxygen concentrator 3.png",
+        "caption": "oxygen concentrator 3"
+      },
+      {
+        "src": "assets/oxygen concentrator 1.png",
+        "caption": "oxygen concentrator 1"
+      },
+      {
+        "src": "assets/oxygen concentrator 4.png",
+        "caption": "oxygen concentrator 4"
+      },
+      {
+        "src": "assets/oxygen concentrator 5.png",
+        "caption": "oxygen concentrator 5"
+      },
+      {
+        "src": "assets/oxygen concentrator.png",
+        "caption": "oxygen concentrator"
+      },
+      {
+        "src": "assets/oxygen concentrator.jpg",
+        "caption": "oxygen concentrator"
+      },
+      {
+        "src": "assets/oxygen concentrator .png",
+        "caption": "oxygen concentrator"
+      }
+    ]
   },
   {
     "slug": "psa-oxygen-plant",
     "title": "PSA Oxygen Plant",
     "tag": "Operations",
     "summary": "Managed a 40+ member team to deliver a PSA oxygen plant, including non-destructive and pneumatic pressure vessel tests.",
-    "detail": "Coordinated cross-functional teams and validation activities to ensure safe, on-time delivery of a full-scale oxygen plant system.",
-    "link": "project.html?slug=psa-oxygen-plant"
+    "detail": "Mission: Deliver large-scale hospitals an on-site PSA oxygen plant that provides continuous oxygen with minimal service needs and eliminates cylinder transport costs.",
+    "link": "project.html?slug=psa-oxygen-plant",
+    "sections": [
+      {
+        "title": "Mission",
+        "body": "Design and deploy a one-time setup, on-site PSA oxygen generation plant for large hospitals. The system delivers continuous oxygen with minimal service requirements, removing reliance on cylinders and lowering cost by eliminating transportation."
+      },
+      {
+        "title": "My Role",
+        "body": "I worked as a Production Manager alongside the oxygen concentrator project. Responsibilities included supply chain coordination, vendor management, post\u2011fabrication partnerships, workforce oversight, and quality assurance."
+      },
+      {
+        "title": "Leadership",
+        "body": "I coordinated a team of 18+ contract workers (machinists, assemblers, welders), 4 engineers, and 4 support staff. I ran board-level project meetings, visited vendors, and maintained timelines to meet tight client deadlines."
+      },
+      {
+        "title": "Hands\u2011On Engineering",
+        "body": "I produced 2D fabrication drawings, developed sheet metal parts for laser cutting, and designed supports for pressure tanks. I also gained experience with post\u2011production processes including sandblasting, painting, pressure vessel testing, dye\u2011penetration tests, and material treatment."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/psa oxygen plant 3.png",
+        "caption": "psa oxygen plant 3"
+      },
+      {
+        "src": "assets/psa oxygen plant 2.png",
+        "caption": "psa oxygen plant 2"
+      },
+      {
+        "src": "assets/PSA oxygent plant.jpg",
+        "caption": "PSA oxygent plant"
+      },
+      {
+        "src": "assets/psa oxygen plant.png",
+        "caption": "psa oxygen plant"
+      }
+    ]
   },
   {
     "slug": "gravitational-effects-boiling-ml",
@@ -60,8 +220,38 @@
     "title": "FSI Study of Arterial Model",
     "tag": "Simulation",
     "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
-    "detail": "Demonstrated how SimVascular can replace costly proprietary workflows for research and education.",
-    "link": "project.html?slug=fsi-arterial-model"
+    "detail": "Research to promote open-source FSI tools for cardiovascular modeling, reducing cost and computational barriers in medical studies.",
+    "link": "project.html?slug=fsi-arterial-model",
+    "sections": [
+      {
+        "title": "Overview",
+        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce medical costs in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model."
+      },
+      {
+        "title": "Tools",
+        "body": "We used SimVascular (SimTK), an open-source cardiovascular modeling and simulation suite developed at UC Berkeley and Stanford. Proprietary benchmarks used Mimics/CATIA for modeling and ANSYS Workbench for simulation prep."
+      },
+      {
+        "title": "Method",
+        "body": "A coronary artery segment was modeled from MRI DICOM images with matched initial parameters across both workflows. We generated a 3D model, applied Delaunay tetrahedral meshing, and compared outcomes to evaluate the open-source pipeline\u2019s effectiveness and improvement areas."
+      },
+      {
+        "title": "Boundary Conditions",
+        "body": "Outlet conditions used an RCR Windkessel model, translating vascular behavior into an electrical analog (resistor, capacitor, current). Inlet waveforms and physiological values were sourced from literature."
+      },
+      {
+        "title": "Roadblocks",
+        "body": "Two major issues were a lack of a system-wide units convention (CGS vs MKS) and limited Windows solver support. I wrote a Python scaling script for model.vtp files and configured an external solver to match SimVascular until platform support improved."
+      },
+      {
+        "title": "Results",
+        "body": "Specific results are withheld as the work is being published. In comparison to standard tools, SimVascular provided comparable flow-parameter outputs with significantly lower computational cost and improved accessibility."
+      },
+      {
+        "title": "Note",
+        "body": "This work is being published; detailed results are not disclosed."
+      }
+    ]
   },
   {
     "slug": "turbine-blade-heat-transfer",
@@ -78,5 +268,41 @@
     "summary": "Designed a 6-cylinder radial pneumatic engine and improved efficiency through thermal-volume optimization.",
     "detail": "Modeled the engine in Autodesk Inventor and applied thermal mechanics to refine cylinder head geometry.",
     "link": "project.html?slug=engine-efficiency-thermal-design"
+  },
+  {
+    "slug": "make-kit",
+    "title": "Make Kit",
+    "tag": "Education",
+    "summary": "Designed an educational maker service with scalable, reusable project kits that teach through hands-on building.",
+    "detail": "Developed a maker kit program centered on the idea that 'Nothing teaches like a project.'",
+    "link": "project.html?slug=make-kit",
+    "sections": [
+      {
+        "title": "Project Objective",
+        "body": "Develop an educational service for students, makers, and learners to gain new skills through hands\u2011on projects. The team researched, interviewed users, and generated concepts to create three scalable, reusable kits focused on usefulness and learning impact."
+      },
+      {
+        "title": "Core Idea",
+        "body": "Nothing teaches like a project."
+      },
+      {
+        "title": "Project Report",
+        "body": "https://docs.google.com/document/d/132zCg0m_YETGPTBIl5tVfMj120ahaglhm5EuE3BwBKY/edit"
+      },
+      {
+        "title": "Design Journal",
+        "body": "https://docs.google.com/document/d/1H2R4M7UsursrBLiYISkscMQCkuZaGnY_VnKPKIdrrDI/edit"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/make it logo .png",
+        "caption": "make it logo"
+      },
+      {
+        "src": "assets/jacobs institute logo for make it .png",
+        "caption": "jacobs institute logo for make it"
+      }
+    ]
   }
 ]
