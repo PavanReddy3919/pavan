@@ -34,12 +34,16 @@ const renderTimeline = (items) => {
   timelineGrid.innerHTML = items
     .map((item, index) => {
       const side = index % 2 === 0 ? "left" : "right";
+      const details = Array.isArray(item.details) && item.details.length
+        ? `<ul class="timeline-details">${item.details.map((d) => `<li>${d}</li>`).join("")}</ul>`
+        : "";
       return `
         <article class="timeline-card ${side}" style="--row:${index + 1}">
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
           <p>${item.summary}</p>
+          ${details}
         </article>
       `;
     })
@@ -94,7 +98,6 @@ const setupMarquee = () => {
 const init = async () => {
   setupScrollButtons();
   setupMarquee();
-  setupTimelineFocus();
 
   try {
     const [projects, timeline] = await Promise.all([
@@ -104,6 +107,7 @@ const init = async () => {
     state.projects = projects;
     renderProjects(projects);
     renderTimeline(timeline);
+    setupTimelineFocus();
   } catch (error) {
     console.error(error);
   }

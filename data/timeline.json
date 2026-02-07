@@ -2,22 +2,45 @@
   {
     "role": "Mechanical Engineer (R&D)",
     "company": "Biosphere",
-    "period": "Jul 2023 — Present",
+    "period": "Jul 2023 \u2014 Present",
     "summary": "Led CAD/DFMA, tolerance analysis, and validation for novel UV technology, driving reliability test plans and supplier collaboration that reduced system CAPEX by 35%.",
-    "link": "project.html?slug=oxygen-concentrator"
+    "link": "project.html?slug=oxygen-concentrator",
+    "details": [
+      "Performed engineering design, testing, and validation of patents for novel UV technology.",
+      "Led and owned CAD, DFMA, and tolerance stack analysis to ensure manufacturability and repeatable assembly.",
+      "Architected and validated rotating electromechanical subsystems under corrosive, sterile, and reliability-critical constraints, including material selection, bearing & seal interfaces, and shaft scoring failure mitigation strategies.",
+      "Led cross-functional design reviews and executed reliability and performance test plans, using data-driven analysis to identify risks, debug failures, and drive design iteration for DOD-funded programs.",
+      "Served as technical owner for external suppliers, partnering with operations and sourcing teams to refine designs, control tolerances, and achieve over 35% reduction in system CAPEX.",
+      "Drove the end-to-end engineering workflow spanning hypothesis generation, experimental design, data analysis, and iterative mechanical design improvements validated through testing."
+    ]
   },
   {
     "role": "Product Design Engineer",
     "company": "BlueGoji",
-    "period": "May 2021 — Nov 2022",
+    "period": "May 2021 \u2014 Nov 2022",
     "summary": "Designed mechanical architecture for a multidirectional motion platform, cutting size by 47% and weight by 34% through structural optimization and testing.",
-    "link": "project.html?slug=omni-directional-treadmill"
+    "link": "project.html?slug=omni-directional-treadmill",
+    "details": [
+      "Designed ground-up mechanical architectures for a multidirectional motion platform, enabling precise, repeatable movement for a VR-integrated rehabilitation system.",
+      "Reengineered drive systems, reducing size by 47% and improving effectiveness in collaboration with the controls team.",
+      "Conducted structural analysis and topological optimization, decreasing weight by 34% while maintaining strength.",
+      "Designed load bearing structures subject to dynamic loading and fatigue constraints using FEA.",
+      "Led prototype builds and design iteration through hands-on testing and assembly feedback."
+    ]
   },
   {
     "role": "Mechanical Design Engineer",
     "company": "Dynaxcel Engineers",
-    "period": "Jun 2021 — Dec 2021",
+    "period": "Jun 2021 \u2014 Dec 2021",
     "summary": "Optimized oxygen concentrator mechanics and airflow, improving compressor efficiency by 13% and reducing exhaust re-entry by 70%.",
-    "link": "project.html?slug=oxygen-concentrator"
+    "link": "project.html?slug=oxygen-concentrator",
+    "details": [
+      "Designed and optimized mechanical components and assembly process, reducing overall system size by 7%.",
+      "Developed and validated airflow and cooling design improvements, including a variable fan solution that increased compressor efficiency by 13% and reduced exhaust re-entry by 70%.",
+      "Optimized the component placement using DFMA principles to increase ease of manufacturing and serviceability.",
+      "Owned BOM tracking, fabrication, and assembly workflows, ensuring conformance to design specifications, quality standards, and on-time delivery of production systems.",
+      "Served as technical liaison between engineering, vendors, and manufacturing teams to resolve build and quality issues.",
+      "Coordinated and supported inspection and validation, including non-destructive testing and pressure testing, to verify structural integrity and safety."
+    ]
   }
 ]
