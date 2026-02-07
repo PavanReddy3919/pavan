@@ -42,7 +42,7 @@ const renderTimeline = (items) => {
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
-          <p>${item.summary}</p>
+          <p class="timeline-summary">${item.summary}</p>
           ${details}
         </article>
       `;
@@ -64,6 +64,12 @@ const setupScrollButtons = () => {
 const setupTimelineFocus = () => {
   const cards = Array.from(document.querySelectorAll(".timeline-card"));
   if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("is-expanded");
+    });
+  });
 
   const updateActive = () => {
     const midpoint = window.innerHeight / 2;

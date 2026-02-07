@@ -35,14 +35,14 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 24px;
   padding: 24px clamp(24px, 6vw, 90px) 110px;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 140px;
+  gap: 90px;
 }
 
 .topbar {
@@ -390,8 +390,30 @@ main {
   margin-bottom: 8px;
 }
 
-.timeline-card:hover .timeline-details,
-.timeline-card.is-active .timeline-details {
+.timeline-card.is-expanded .timeline-details {
+  display: block;
+}
+
+.timeline-card.is-expanded .timeline-summary {
+  display: none;
+}
+
+.timeline-card {
+  cursor: pointer;
+}
+
+.timeline-card:hover {
+  transform: scale(0.93);
+}
+
+.timeline-card.is-active {
+  transform: scale(1.04);
+}
+
+.timeline-card.is-expanded {
+  transform: scale(1.02);
+  opacity: 1;
+}
   display: block;
 }
 
