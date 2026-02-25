@@ -34,6 +34,7 @@ const renderTimeline = (items) => {
   timelineGrid.innerHTML = items
     .map((item, index) => {
       const side = index % 2 === 0 ? "left" : "right";
+      const preview = Array.isArray(item.details) && item.details.length ? item.details[0] : "";
       const details = Array.isArray(item.details) && item.details.length
         ? `<ul class="timeline-details">${item.details.map((d) => `<li>${d}</li>`).join("")}</ul>`
         : "";
@@ -42,6 +43,7 @@ const renderTimeline = (items) => {
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
+          ${preview ? `<p class="timeline-preview">${preview}</p>` : ""}
           ${details}
         </article>
       `;
