@@ -165,8 +165,8 @@ main {
 }
 
 .badge {
-  height: 46px;
-  width: 88px;
+  height: 44px;
+  width: 86px;
   display: grid;
   place-items: center;
   padding: 4px 6px;
@@ -176,13 +176,28 @@ main {
   overflow: hidden;
 }
 
-.badge img {
+.partner-logo {
   max-width: 100%;
   max-height: 100%;
-  width: auto !important;
-  height: auto !important;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
+}
+
+.dod-logo {
+  width: 36px;
+  height: 36px;
+}
+
+.berkeley-logo {
+  width: 70px;
+  height: 34px;
+}
+
+.biosphere-logo {
+  width: 34px;
+  height: 34px;
 }
 
 .stats {
@@ -702,8 +717,23 @@ main {
   }
 
   .badge {
-    height: 44px;
-    width: 88px;
+    height: 40px;
+    width: 76px;
+  }
+
+  .dod-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .berkeley-logo {
+    width: 62px;
+    height: 28px;
+  }
+
+  .biosphere-logo {
+    width: 28px;
+    height: 28px;
   }
 
   .gallery-item {
