@@ -42,7 +42,6 @@ const renderTimeline = (items) => {
           <div class="timeline-meta">${item.period}</div>
           <h3>${item.role}</h3>
           <p><strong>${item.company}</strong></p>
-          <p class="timeline-summary">${item.summary}</p>
           ${details}
         </article>
       `;
@@ -67,7 +66,11 @@ const setupTimelineFocus = () => {
 
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      card.classList.toggle("is-expanded");
+      const isExpanded = card.classList.contains("is-expanded");
+      cards.forEach((item) => item.classList.remove("is-expanded"));
+      if (!isExpanded) {
+        card.classList.add("is-expanded");
+      }
     });
   });
 

@@ -29,15 +29,6 @@ const linkLabel = (value, fallback) => {
   return fallback || "Open Link";
 };
 
-const normalizeCaption = (value) => {
-  if (!value) return "Project image";
-  return value
-    .replace(/\\.[^/.]+$/, "")
-    .replace(/[-_]+/g, " ")
-    .replace(/\\s+/g, " ")
-    .trim();
-};
-
 const renderProject = (project) => {
   document.getElementById("project-title").textContent = project.title;
   document.getElementById("project-tag").textContent = project.tag;
@@ -45,30 +36,28 @@ const renderProject = (project) => {
 
   const body = document.getElementById("project-body");
   let content = "";
+  const sections = Array.isArray(project.sections) && project.sections.length > 0
+    ? project.sections
+    : [{ title: "Overview", body: project.detail || project.summary }];
 
-  if (Array.isArray(project.sections) && project.sections.length > 0) {
-    content += project.sections
-      .map(
-        (section) => `
-          <article class="timeline-card">
-            <div class="timeline-meta">${section.title}</div>
-            ${
-              isLink(section.body)
-                ? `<a class="link-button" href="${section.body}" target="_blank" rel="noreferrer">${linkLabel(section.body, section.title)}</a>`
-                : `<p>${section.body}</p>`
-            }
-          </article>
-        `
-      )
-      .join("");
-  } else {
-    content += `
-      <article class="timeline-card">
-        <div class="timeline-meta">Overview</div>
-        <p>${project.detail || project.summary}</p>
-      </article>
-    `;
-  }
+  content += `
+    <article class="case-panel">
+      ${sections
+        .map(
+          (section) => `
+            <section class="case-block">
+              <h3>${section.title}</h3>
+              ${
+                isLink(section.body)
+                  ? `<a class="link-button" href="${section.body}" target="_blank" rel="noreferrer">${linkLabel(section.body, section.title)}</a>`
+                  : `<p>${section.body}</p>`
+              }
+            </section>
+          `
+        )
+        .join("")}
+    </article>
+  `;
 
   if (Array.isArray(project.gallery) && project.gallery.length > 0) {
     const total = project.gallery.length;

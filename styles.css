@@ -35,14 +35,14 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   padding: 24px clamp(24px, 6vw, 90px) 110px;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 72px;
 }
 
 .topbar {
@@ -128,7 +128,7 @@ main {
 }
 
 .timeline {
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 .hero-text h1 {
@@ -161,14 +161,24 @@ main {
 .badge-row {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+}
+
+.badge {
+  height: 68px;
+  width: 132px;
+  display: grid;
+  place-items: center;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 24px rgba(10, 20, 40, 0.12);
 }
 
 .badge-row img {
-  height: 50px;
+  height: 100%;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 8px 14px rgba(10, 20, 40, 0.15));
 }
 
 .stats {
@@ -269,8 +279,8 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  gap: 32px;
-  margin-bottom: 32px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .section-title h2 {
@@ -323,7 +333,7 @@ main {
 
 .timeline-card {
   position: relative;
-  cursor: default;
+  cursor: pointer;
   transform: scale(0.9);
   opacity: 0.7;
   min-height: 240px;
@@ -380,7 +390,7 @@ main {
 
 .timeline-details {
   display: none;
-  margin: 14px 0 0;
+  margin: 12px 0 0;
   padding-left: 18px;
   color: var(--muted);
   line-height: 1.55;
@@ -394,27 +404,9 @@ main {
   display: block;
 }
 
-.timeline-card.is-expanded .timeline-summary {
-  display: none;
-}
-
-.timeline-card {
-  cursor: pointer;
-}
-
-.timeline-card:hover {
-  transform: scale(0.93);
-}
-
-.timeline-card.is-active {
-  transform: scale(1.04);
-}
-
 .timeline-card.is-expanded {
   transform: scale(1.02);
   opacity: 1;
-}
-  display: block;
 }
 
 .timeline-meta {
@@ -427,7 +419,7 @@ main {
 
 .projects {
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 0;
 }
 
 .project-card {
@@ -503,6 +495,19 @@ main {
   gap: 32px;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 24px rgba(10, 20, 40, 0.12);
+  color: var(--text);
+  font-weight: 600;
+}
+
 .project-hero {
   padding: 40px;
   border-radius: var(--radius-lg);
@@ -515,8 +520,28 @@ main {
   gap: 24px;
 }
 
-.project-body .timeline-card::before {
-  display: none;
+.case-panel {
+  padding: 34px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 22px;
+}
+
+.case-block h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.case-block p {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #42464f;
 }
 
 .modal-close {
@@ -662,6 +687,11 @@ main {
 
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .badge {
+    height: 58px;
+    width: 112px;
   }
 
   .gallery-item {
