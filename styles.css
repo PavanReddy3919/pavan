@@ -161,24 +161,22 @@ main {
 .badge-row {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .badge {
-  height: 44px;
-  width: 86px;
-  display: grid;
-  place-items: center;
-  padding: 4px 6px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 24px rgba(10, 20, 40, 0.12);
-  overflow: hidden;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  height: auto;
+  width: auto;
+  overflow: visible;
 }
 
 .partner-logo {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: none;
+  max-height: none;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -186,18 +184,15 @@ main {
 }
 
 .dod-logo {
-  width: 36px;
-  height: 36px;
+  height: 28px;
 }
 
 .berkeley-logo {
-  width: 70px;
-  height: 34px;
+  height: 28px;
 }
 
 .biosphere-logo {
-  width: 34px;
-  height: 34px;
+  height: 22px;
 }
 
 .stats {
@@ -716,24 +711,16 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .badge {
-    height: 40px;
-    width: 76px;
-  }
-
   .dod-logo {
-    width: 30px;
-    height: 30px;
+    height: 24px;
   }
 
   .berkeley-logo {
-    width: 62px;
-    height: 28px;
+    height: 24px;
   }
 
   .biosphere-logo {
-    width: 28px;
-    height: 28px;
+    height: 20px;
   }
 
   .gallery-item {
