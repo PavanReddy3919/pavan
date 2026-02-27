@@ -96,19 +96,25 @@ const setupGalleryLightbox = () => {
   if (!lightbox || !lightboxImage) return;
 
   let activeThumb = null;
+  let lightboxState = "closed";
 
   const hideLightbox = () => {
     lightbox.setAttribute("aria-hidden", "true");
     lightbox.classList.remove("open");
+    document.body.classList.remove("lightbox-active");
     lightboxImage.style.transition = "";
     lightboxImage.style.transform = "";
+    lightboxState = "closed";
   };
 
   const openLightbox = (thumbImage) => {
+    if (lightboxState !== "closed") return;
+    lightboxState = "opening";
     activeThumb = thumbImage;
     lightboxImage.src = thumbImage.currentSrc || thumbImage.src;
 
     lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-active");
     const thumbRect = thumbImage.getBoundingClientRect();
     const finalRect = lightboxImage.getBoundingClientRect();
 
@@ -126,9 +132,17 @@ const setupGalleryLightbox = () => {
       lightboxImage.style.transition = "transform 380ms cubic-bezier(0.2, 0.7, 0.12, 1)";
       lightboxImage.style.transform = "translate(0, 0) scale(1, 1)";
     });
+
+    const onOpenEnd = () => {
+      lightboxState = "open";
+      lightboxImage.removeEventListener("transitionend", onOpenEnd);
+    };
+    lightboxImage.addEventListener("transitionend", onOpenEnd);
   };
 
   const closeLightbox = () => {
+    if (lightboxState !== "open") return;
+    lightboxState = "closing";
     if (!activeThumb) {
       hideLightbox();
       return;
@@ -145,14 +159,19 @@ const setupGalleryLightbox = () => {
     lightboxImage.style.transition = "transform 320ms cubic-bezier(0.4, 0, 0.2, 1)";
     lightboxImage.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
 
-    window.setTimeout(() => {
+    const onCloseEnd = () => {
       hideLightbox();
       activeThumb = null;
-    }, 320);
+      lightboxImage.removeEventListener("transitionend", onCloseEnd);
+    };
+    lightboxImage.addEventListener("transitionend", onCloseEnd);
   };
 
   document.querySelectorAll(".gallery-item img").forEach((image) => {
-    image.addEventListener("click", () => openLightbox(image));
+    image.addEventListener("click", (event) => {
+      event.stopPropagation();
+      openLightbox(image);
+    });
   });
 
   lightbox.addEventListener("click", (event) => {
@@ -197,6 +216,18 @@ const init = async () => {
   if (backLink) {
     backLink.addEventListener("click", (event) => {
       event.preventDefault();
+      try {
+        const ref = document.referrer ? new URL(document.referrer) : null;
+        const fromPortfolioHome = ref
+          && ref.origin === window.location.origin
+          && (ref.pathname.endsWith("/") || ref.pathname.endsWith("/index.html"));
+        if (fromPortfolioHome) {
+          window.history.back();
+          return;
+        }
+      } catch {
+        // fall through to direct navigation
+      }
       window.location.href = "index.html?return=1#projects";
     });
   }

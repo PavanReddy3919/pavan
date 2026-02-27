@@ -645,6 +645,10 @@ main {
   animation: gallerySlide 26s linear infinite;
 }
 
+.lightbox-active .gallery.marquee .gallery-track {
+  animation-play-state: paused;
+}
+
 .gallery-item {
   width: 220px;
   min-width: 220px;
@@ -702,12 +706,13 @@ main {
 .lightbox-image {
   position: relative;
   z-index: 1;
-  width: min(1100px, 90vw);
-  max-height: 88vh;
+  width: min(935px, 76.5vw);
+  max-height: 75vh;
   border-radius: 18px;
   object-fit: contain;
   background: #fff;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  will-change: transform;
 }
 
 .lightbox.open .lightbox-backdrop {

@@ -86,12 +86,10 @@ const restoreScrollFromProject = () => {
   const saved = sessionStorage.getItem("portfolioScrollY");
   if (!saved) return;
 
-  window.requestAnimationFrame(() => {
-    window.scrollTo(0, Number(saved));
-    sessionStorage.removeItem("portfolioScrollY");
-    const cleanUrl = `${window.location.pathname}${window.location.hash || ""}`;
-    window.history.replaceState({}, "", cleanUrl);
-  });
+  window.scrollTo(0, Number(saved));
+  sessionStorage.removeItem("portfolioScrollY");
+  const cleanUrl = `${window.location.pathname}${window.location.hash || ""}`;
+  window.history.replaceState({}, "", cleanUrl);
 };
 
 const setupTimelineFocus = () => {
@@ -139,6 +137,7 @@ const setupMarquee = () => {
 };
 
 const init = async () => {
+  restoreScrollFromProject();
   setupScrollButtons();
   setupMobileMenu();
   setupMarquee();
@@ -152,7 +151,6 @@ const init = async () => {
     renderProjects(projects);
     renderTimeline(timeline);
     setupTimelineFocus();
-    restoreScrollFromProject();
   } catch (error) {
     console.error(error);
   }
