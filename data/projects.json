@@ -2,14 +2,30 @@
   {
     "slug": "uv-bioreactor-biosphere",
     "title": "UV Bioreactor - Biosphere",
-    "tag": "Biomanufacturing",
-    "summary": "Designed and validate UV sterilization technology for Biomanufacturing systems.",
-    "detail": "Designed and validate UV sterilization technology for Biomanufacturing systems.",
+    "tag": "Research and Development",
+    "summary": "Led mechanical design and experimental execution for next-generation UV-sterilizable bioreactor systems under Department of Defense-aligned programs.",
+    "detail": "Led mechanical design and experimental execution for next-generation UV-sterilizable bioreactor systems under Department of Defense-aligned programs.",
     "link": "project.html?slug=uv-bioreactor-biosphere",
     "sections": [
       {
-        "title": "Overview",
-        "body": "Designed and validate UV sterilization technology for Biomanufacturing systems."
+        "title": "Role Scope",
+        "body": "At Biosphere (Arcology), I led mechanical design and experimental execution for next-generation UV-sterilizable bioreactor systems developed under Department of Defense-aligned programs. My role focused on translating system-level objectives into manufacturable hardware by defining architectures, owning critical component and subsystem design, and structuring validation strategies that ensured performance, sterility, and reliability at scale."
+      },
+      {
+        "title": "Core Engineering Work",
+        "body": "I drove the design of core assemblies, including impeller, shaft, seal, and vessel interface systems, with emphasis on UV compatibility, aseptic operation, material durability, and long-term reliability. This included first-principles analysis, detailed CAD ownership, materials and surface engineering decisions, supplier coordination, and experimental frameworks that linked component behavior directly to process outcomes."
+      },
+      {
+        "title": "Validation and Data Strategy",
+        "body": "I established testing throughput strategies, reliability targets, and data interpretation workflows so engineering decisions were grounded in measurable evidence rather than assumptions."
+      },
+      {
+        "title": "Cross-Functional Program Execution",
+        "body": "Beyond component design, I coordinated execution across mechanical, process, and controls teams, ensuring engineering work aligned with program deliverables and Department of Defense performance expectations. I shaped experimental roadmaps, defined success criteria, and maintained technical coherence across parallel development efforts."
+      },
+      {
+        "title": "Innovation and IP Contribution",
+        "body": "In parallel, I contributed to novel intellectual property by developing new hardware architectures and validating them through structured experimentation. This translated engineering insight into defensible innovations that supported both near-term program success and long-term technology differentiation."
       }
     ]
   },
@@ -52,7 +68,7 @@
   {
     "slug": "rumifico-sharing-memories",
     "title": "Rumifico — Sharing Memories",
-    "tag": "Human-Centered",
+    "tag": "Product Development",
     "summary": "Collaborated with HP mentors to engineer a device that strengthens connections between parents and college-bound children.",
     "detail": "Human-centered design project with HP and a Google UX designer to reconnect parents and college students through shared memories.",
     "link": "project.html?slug=rumifico-sharing-memories",
@@ -92,7 +108,7 @@
   {
     "slug": "oxygen-concentrator",
     "title": "Oxygen Concentrator",
-    "tag": "Medical Device",
+    "tag": "Product Design",
     "summary": "Designed an oxygen concentrator using PSA technology with attention to functionality, space, and aesthetics through DFMA principles.",
     "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5–8 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
     "link": "project.html?slug=oxygen-concentrator",
@@ -164,7 +180,7 @@
   {
     "slug": "psa-oxygen-plant",
     "title": "PSA Oxygen Plant",
-    "tag": "Operations",
+    "tag": "Manufacturing",
     "summary": "Managed a 40+ member team to deliver a PSA oxygen plant, including non-destructive and pneumatic pressure vessel tests.",
     "detail": "Mission: Deliver large-scale hospitals an on-site PSA oxygen plant that provides continuous oxygen with minimal service needs and eliminates cylinder transport costs.",
     "link": "project.html?slug=psa-oxygen-plant",
@@ -208,7 +224,7 @@
   {
     "slug": "make-kit",
     "title": "Make Kit",
-    "tag": "Education",
+    "tag": "Product Development",
     "summary": "Designed an educational maker service with scalable, reusable project kits that teach through hands-on building.",
     "detail": "Developed a maker kit program centered on the idea that 'Nothing teaches like a project.'",
     "link": "project.html?slug=make-kit",
@@ -244,7 +260,7 @@
   {
     "slug": "fsi-arterial-model",
     "title": "FSI Study of Arterial Model",
-    "tag": "Simulation",
+    "tag": "Research",
     "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
     "detail": "Research to promote open-source FSI tools for cardiovascular modeling, reducing cost and computational barriers in medical studies.",
     "link": "project.html?slug=fsi-arterial-model",
@@ -290,7 +306,7 @@
   {
     "slug": "solar-pv-cell-optimization",
     "title": "Solar PV Cell Optimization",
-    "tag": "Energy",
+    "tag": "Research",
     "summary": "Built a neural network model to optimize PV cell organization for improved system performance.",
     "detail": "Validated the model with data and evaluated power output to identify best-performing cell combinations.",
     "link": "project.html?slug=solar-pv-cell-optimization"
@@ -298,7 +314,7 @@
   {
     "slug": "boiler-performance-ml",
     "title": "Boiler Performance Modeling",
-    "tag": "Thermal",
+    "tag": "Research and Analysis",
     "summary": "Developed neural network models to predict boiler performance in solar thermal power plants.",
     "detail": "Trained models on real-world data for vertical tube boiling at 4.0 MPa and evaluated operating parameter impacts.",
     "link": "project.html?slug=boiler-performance-ml"
@@ -306,7 +322,7 @@
   {
     "slug": "turbine-blade-heat-transfer",
     "title": "Turbine Blade Heat Transfer Analysis",
-    "tag": "Aero-Thermal",
+    "tag": "Research",
     "summary": "Analyzed heat transfer in turbine blades via modeling and experiments on an E423 airfoil.",
     "detail": "Investigated design optimization opportunities to improve thermal efficiency under varying operating conditions.",
     "link": "project.html?slug=turbine-blade-heat-transfer"
@@ -314,7 +330,7 @@
   {
     "slug": "engine-efficiency-thermal-design",
     "title": "Engine Efficiency Through Thermal Design",
-    "tag": "Mechanical",
+    "tag": "Design and Optimization",
     "summary": "Designed a 6-cylinder radial pneumatic engine and improved efficiency through thermal-volume optimization.",
     "detail": "Modeled the engine in Autodesk Inventor and applied thermal mechanics to refine cylinder head geometry.",
     "link": "project.html?slug=engine-efficiency-thermal-design"
