@@ -1,5 +1,19 @@
 [
   {
+    "slug": "uv-bioreactor-biosphere",
+    "title": "UV Bioreactor - Biosphere",
+    "tag": "Biomanufacturing",
+    "summary": "Designed and validate UV sterilization technology for Biomanufacturing systems.",
+    "detail": "Designed and validate UV sterilization technology for Biomanufacturing systems.",
+    "link": "project.html?slug=uv-bioreactor-biosphere",
+    "sections": [
+      {
+        "title": "Overview",
+        "body": "Designed and validate UV sterilization technology for Biomanufacturing systems."
+      }
+    ]
+  },
+  {
     "slug": "omni-directional-treadmill",
     "title": "Omni-Directional Treadmill",
     "tag": "Product Design",
@@ -37,7 +51,7 @@
   },
   {
     "slug": "rumifico-sharing-memories",
-    "title": "Rumifico \u2014 Sharing Memories",
+    "title": "Rumifico — Sharing Memories",
     "tag": "Human-Centered",
     "summary": "Collaborated with HP mentors to engineer a device that strengthens connections between parents and college-bound children.",
     "detail": "Human-centered design project with HP and a Google UX designer to reconnect parents and college students through shared memories.",
@@ -45,11 +59,11 @@
     "sections": [
       {
         "title": "Overview",
-        "body": "Rumifico is a nostalgic, 21st\u2011century pager designed to help parents and kids who have moved out for college stay connected through shared memories."
+        "body": "Rumifico is a nostalgic, 21st‑century pager designed to help parents and kids who have moved out for college stay connected through shared memories."
       },
       {
         "title": "Collaboration",
-        "body": "We worked alongside HP and a Google UI/UX designer, applying human\u2011centered design to turn a meaningful connection gap into a tangible product concept."
+        "body": "We worked alongside HP and a Google UI/UX designer, applying human‑centered design to turn a meaningful connection gap into a tangible product concept."
       },
       {
         "title": "Recognition",
@@ -80,12 +94,12 @@
     "title": "Oxygen Concentrator",
     "tag": "Medical Device",
     "summary": "Designed an oxygen concentrator using PSA technology with attention to functionality, space, and aesthetics through DFMA principles.",
-    "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5\u20138 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
+    "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5–8 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
     "link": "project.html?slug=oxygen-concentrator",
     "sections": [
       {
         "title": "Mission",
-        "body": "This project supported the Government of India\u2019s effort to solve the medical-grade oxygen shortage during COVID-19. We targeted a low-cost, compact PSA concentrator (25 LPM) for small to mid-size hospitals, designed as a miniature counterpart to on-site PSA plants."
+        "body": "This project supported the Government of India’s effort to solve the medical-grade oxygen shortage during COVID-19. We targeted a low-cost, compact PSA concentrator (25 LPM) for small to mid-size hospitals, designed as a miniature counterpart to on-site PSA plants."
       },
       {
         "title": "Principle",
@@ -100,11 +114,11 @@
         "body": "As one of two Product Design leads, I iterated the framework around constraints including size, weight, materials, aesthetics, electronics placement, mobility, airflow, and serviceability. Designs were reviewed with the engineering team and client and approved by the Technical Director."
       },
       {
-        "title": "Key Contribution \u2014 Closure System",
+        "title": "Key Contribution — Closure System",
         "body": "To avoid welded thin sheet metal and exposed sharp edges, I developed a manufacturable closure system inspired by everyday mechanisms (CPU slide panels, angled screws in wood frames, and generator enclosures). This enabled safe, repeatable assembly for mass production."
       },
       {
-        "title": "Key Contribution \u2014 Spring Plate Fix",
+        "title": "Key Contribution — Spring Plate Fix",
         "body": "Testing revealed a small air gap at the top dish end plate that could grow over time as zeolite granules moved under cyclic pressure, increasing wear. After evaluating alternatives, I designed a compressed spring plate with seven springs to eliminate the gap as it formed. This prevented granule wear, improved efficiency, and was adopted in both projects."
       },
       {
@@ -161,15 +175,15 @@
       },
       {
         "title": "My Role",
-        "body": "I worked as a Production Manager alongside the oxygen concentrator project. Responsibilities included supply chain coordination, vendor management, post\u2011fabrication partnerships, workforce oversight, and quality assurance."
+        "body": "I worked as a Production Manager alongside the oxygen concentrator project. Responsibilities included supply chain coordination, vendor management, post‑fabrication partnerships, workforce oversight, and quality assurance."
       },
       {
         "title": "Leadership",
         "body": "I coordinated a team of 18+ contract workers (machinists, assemblers, welders), 4 engineers, and 4 support staff. I ran board-level project meetings, visited vendors, and maintained timelines to meet tight client deadlines."
       },
       {
-        "title": "Hands\u2011On Engineering",
-        "body": "I produced 2D fabrication drawings, developed sheet metal parts for laser cutting, and designed supports for pressure tanks. I also gained experience with post\u2011production processes including sandblasting, painting, pressure vessel testing, dye\u2011penetration tests, and material treatment."
+        "title": "Hands‑On Engineering",
+        "body": "I produced 2D fabrication drawings, developed sheet metal parts for laser cutting, and designed supports for pressure tanks. I also gained experience with post‑production processes including sandblasting, painting, pressure vessel testing, dye‑penetration tests, and material treatment."
       }
     ],
     "gallery": [
@@ -188,6 +202,80 @@
       {
         "src": "assets/psa-oxygen-plant-3.png",
         "caption": "psa oxygen plant 3"
+      }
+    ]
+  },
+  {
+    "slug": "make-kit",
+    "title": "Make Kit",
+    "tag": "Education",
+    "summary": "Designed an educational maker service with scalable, reusable project kits that teach through hands-on building.",
+    "detail": "Developed a maker kit program centered on the idea that 'Nothing teaches like a project.'",
+    "link": "project.html?slug=make-kit",
+    "sections": [
+      {
+        "title": "Project Objective",
+        "body": "Develop an educational service for students, makers, and learners to gain new skills through hands‑on projects. The team researched, interviewed users, and generated concepts to create three scalable, reusable kits focused on usefulness and learning impact."
+      },
+      {
+        "title": "Core Idea",
+        "body": "Nothing teaches like a project."
+      },
+      {
+        "title": "Project Report",
+        "body": "https://docs.google.com/document/d/132zCg0m_YETGPTBIl5tVfMj120ahaglhm5EuE3BwBKY/edit"
+      },
+      {
+        "title": "Design Journal",
+        "body": "https://docs.google.com/document/d/1H2R4M7UsursrBLiYISkscMQCkuZaGnY_VnKPKIdrrDI/edit"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/make-it-logo.png",
+        "caption": "make it logo"
+      },
+      {
+        "src": "assets/jacobs-institute-logo-for-make-it.png",
+        "caption": "jacobs institute logo for make it"
+      }
+    ]
+  },
+  {
+    "slug": "fsi-arterial-model",
+    "title": "FSI Study of Arterial Model",
+    "tag": "Simulation",
+    "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
+    "detail": "Research to promote open-source FSI tools for cardiovascular modeling, reducing cost and computational barriers in medical studies.",
+    "link": "project.html?slug=fsi-arterial-model",
+    "sections": [
+      {
+        "title": "Overview",
+        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce medical costs in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model."
+      },
+      {
+        "title": "Tools",
+        "body": "We used SimVascular (SimTK), an open-source cardiovascular modeling and simulation suite developed at UC Berkeley and Stanford. Proprietary benchmarks used Mimics/CATIA for modeling and ANSYS Workbench for simulation prep."
+      },
+      {
+        "title": "Method",
+        "body": "A coronary artery segment was modeled from MRI DICOM images with matched initial parameters across both workflows. We generated a 3D model, applied Delaunay tetrahedral meshing, and compared outcomes to evaluate the open-source pipeline’s effectiveness and improvement areas."
+      },
+      {
+        "title": "Boundary Conditions",
+        "body": "Outlet conditions used an RCR Windkessel model, translating vascular behavior into an electrical analog (resistor, capacitor, current). Inlet waveforms and physiological values were sourced from literature."
+      },
+      {
+        "title": "Roadblocks",
+        "body": "Two major issues were a lack of a system-wide units convention (CGS vs MKS) and limited Windows solver support. I wrote a Python scaling script for model.vtp files and configured an external solver to match SimVascular until platform support improved."
+      },
+      {
+        "title": "Results",
+        "body": "Specific results are withheld as the work is being published. In comparison to standard tools, SimVascular provided comparable flow-parameter outputs with significantly lower computational cost and improved accessibility."
+      },
+      {
+        "title": "Note",
+        "body": "This work is being published; detailed results are not disclosed."
       }
     ]
   },
@@ -216,44 +304,6 @@
     "link": "project.html?slug=boiler-performance-ml"
   },
   {
-    "slug": "fsi-arterial-model",
-    "title": "FSI Study of Arterial Model",
-    "tag": "Simulation",
-    "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
-    "detail": "Research to promote open-source FSI tools for cardiovascular modeling, reducing cost and computational barriers in medical studies.",
-    "link": "project.html?slug=fsi-arterial-model",
-    "sections": [
-      {
-        "title": "Overview",
-        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce medical costs in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model."
-      },
-      {
-        "title": "Tools",
-        "body": "We used SimVascular (SimTK), an open-source cardiovascular modeling and simulation suite developed at UC Berkeley and Stanford. Proprietary benchmarks used Mimics/CATIA for modeling and ANSYS Workbench for simulation prep."
-      },
-      {
-        "title": "Method",
-        "body": "A coronary artery segment was modeled from MRI DICOM images with matched initial parameters across both workflows. We generated a 3D model, applied Delaunay tetrahedral meshing, and compared outcomes to evaluate the open-source pipeline\u2019s effectiveness and improvement areas."
-      },
-      {
-        "title": "Boundary Conditions",
-        "body": "Outlet conditions used an RCR Windkessel model, translating vascular behavior into an electrical analog (resistor, capacitor, current). Inlet waveforms and physiological values were sourced from literature."
-      },
-      {
-        "title": "Roadblocks",
-        "body": "Two major issues were a lack of a system-wide units convention (CGS vs MKS) and limited Windows solver support. I wrote a Python scaling script for model.vtp files and configured an external solver to match SimVascular until platform support improved."
-      },
-      {
-        "title": "Results",
-        "body": "Specific results are withheld as the work is being published. In comparison to standard tools, SimVascular provided comparable flow-parameter outputs with significantly lower computational cost and improved accessibility."
-      },
-      {
-        "title": "Note",
-        "body": "This work is being published; detailed results are not disclosed."
-      }
-    ]
-  },
-  {
     "slug": "turbine-blade-heat-transfer",
     "title": "Turbine Blade Heat Transfer Analysis",
     "tag": "Aero-Thermal",
@@ -268,41 +318,5 @@
     "summary": "Designed a 6-cylinder radial pneumatic engine and improved efficiency through thermal-volume optimization.",
     "detail": "Modeled the engine in Autodesk Inventor and applied thermal mechanics to refine cylinder head geometry.",
     "link": "project.html?slug=engine-efficiency-thermal-design"
-  },
-  {
-    "slug": "make-kit",
-    "title": "Make Kit",
-    "tag": "Education",
-    "summary": "Designed an educational maker service with scalable, reusable project kits that teach through hands-on building.",
-    "detail": "Developed a maker kit program centered on the idea that 'Nothing teaches like a project.'",
-    "link": "project.html?slug=make-kit",
-    "sections": [
-      {
-        "title": "Project Objective",
-        "body": "Develop an educational service for students, makers, and learners to gain new skills through hands\u2011on projects. The team researched, interviewed users, and generated concepts to create three scalable, reusable kits focused on usefulness and learning impact."
-      },
-      {
-        "title": "Core Idea",
-        "body": "Nothing teaches like a project."
-      },
-      {
-        "title": "Project Report",
-        "body": "https://docs.google.com/document/d/132zCg0m_YETGPTBIl5tVfMj120ahaglhm5EuE3BwBKY/edit"
-      },
-      {
-        "title": "Design Journal",
-        "body": "https://docs.google.com/document/d/1H2R4M7UsursrBLiYISkscMQCkuZaGnY_VnKPKIdrrDI/edit"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "assets/make-it-logo.png",
-        "caption": "make it logo"
-      },
-      {
-        "src": "assets/jacobs-institute-logo-for-make-it.png",
-        "caption": "jacobs institute logo for make it"
-      }
-    ]
   }
 ]

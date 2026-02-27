@@ -59,6 +59,7 @@ main {
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
   margin-top: 4px;
+  position: sticky;
 }
 
 .logo {
@@ -77,6 +78,29 @@ main {
   gap: 20px;
   font-size: 0.95rem;
   color: var(--muted);
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 18px rgba(15, 18, 26, 0.1);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #1d1d1f;
+  border-radius: 2px;
 }
 
 .nav a {
@@ -184,7 +208,7 @@ main {
 }
 
 .dod-logo {
-  height: 60px;
+  height: 68px;
 }
 
 .berkeley-logo {
@@ -681,7 +705,42 @@ main {
 
 @media (max-width: 900px) {
   .topbar {
+    padding: 12px 14px;
+    border-radius: 16px;
+    gap: 10px;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    left: 12px;
     flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 30px rgba(10, 20, 40, 0.16);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(240, 244, 252, 0.7);
   }
 
   .timeline-grid {
@@ -712,7 +771,7 @@ main {
   }
 
   .dod-logo {
-    height: 48px;
+    height: 52px;
   }
 
   .berkeley-logo {

@@ -104,6 +104,23 @@ const init = async () => {
       document.querySelector(button.dataset.scroll)?.scrollIntoView({ behavior: "smooth" });
     });
   });
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
+  const backLink = document.querySelector(".back-link");
+  if (backLink) {
+    backLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "index.html?return=1#projects";
+    });
+  }
 };
 
 init();

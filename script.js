@@ -62,6 +62,38 @@ const setupScrollButtons = () => {
   });
 };
 
+const setupMobileMenu = () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+};
+
+const restoreScrollFromProject = () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("return") !== "1") return;
+  const saved = sessionStorage.getItem("portfolioScrollY");
+  if (!saved) return;
+
+  window.requestAnimationFrame(() => {
+    window.scrollTo(0, Number(saved));
+    sessionStorage.removeItem("portfolioScrollY");
+    const cleanUrl = `${window.location.pathname}${window.location.hash || ""}`;
+    window.history.replaceState({}, "", cleanUrl);
+  });
+};
+
 const setupTimelineFocus = () => {
   const cards = Array.from(document.querySelectorAll(".timeline-card"));
   if (!cards.length) return;
@@ -108,6 +140,7 @@ const setupMarquee = () => {
 
 const init = async () => {
   setupScrollButtons();
+  setupMobileMenu();
   setupMarquee();
 
   try {
@@ -119,6 +152,7 @@ const init = async () => {
     renderProjects(projects);
     renderTimeline(timeline);
     setupTimelineFocus();
+    restoreScrollFromProject();
   } catch (error) {
     console.error(error);
   }
@@ -128,6 +162,7 @@ const init = async () => {
     if (!card) return;
     const project = state.projects.find((item) => item.slug === card.dataset.slug);
     if (project) {
+      sessionStorage.setItem("portfolioScrollY", String(window.scrollY));
       window.location.href = project.link;
     }
   });
