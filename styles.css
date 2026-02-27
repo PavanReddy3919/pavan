@@ -663,6 +663,7 @@ main {
   border-radius: 14px;
   object-fit: contain;
   background: #ffffff;
+  cursor: zoom-in;
 }
 
 .gallery-item figcaption {
@@ -672,6 +673,45 @@ main {
 .gallery.static .gallery-track {
   flex-wrap: wrap;
   width: 100%;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.lightbox[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 8, 12, 0.72);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.lightbox-image {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 90vw);
+  max-height: 88vh;
+  border-radius: 18px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox.open .lightbox-backdrop {
+  opacity: 1;
 }
 
 @keyframes marquee {

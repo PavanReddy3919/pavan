@@ -27,6 +27,16 @@
         "title": "Innovation and IP Contribution",
         "body": "In parallel, I contributed to novel intellectual property by developing new hardware architectures and validating them through structured experimentation. This translated engineering insight into defensible innovations that supported both near-term program success and long-term technology differentiation."
       }
+    ],
+    "gallery": [
+      {
+        "src": "assets/biosphere-dod-lab-scale.avif",
+        "caption": "Lab scale developed for microbial oil for DoD"
+      },
+      {
+        "src": "assets/biosphere-dod-reactor.jpg",
+        "caption": "Reactor running DoD process"
+      }
     ]
   },
   {

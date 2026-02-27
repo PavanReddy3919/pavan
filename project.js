@@ -90,11 +90,90 @@ const renderProject = (project) => {
   body.innerHTML = content;
 };
 
+const setupGalleryLightbox = () => {
+  const lightbox = document.getElementById("gallery-lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  if (!lightbox || !lightboxImage) return;
+
+  let activeThumb = null;
+
+  const hideLightbox = () => {
+    lightbox.setAttribute("aria-hidden", "true");
+    lightbox.classList.remove("open");
+    lightboxImage.style.transition = "";
+    lightboxImage.style.transform = "";
+  };
+
+  const openLightbox = (thumbImage) => {
+    activeThumb = thumbImage;
+    lightboxImage.src = thumbImage.currentSrc || thumbImage.src;
+
+    lightbox.setAttribute("aria-hidden", "false");
+    const thumbRect = thumbImage.getBoundingClientRect();
+    const finalRect = lightboxImage.getBoundingClientRect();
+
+    const dx = thumbRect.left - finalRect.left;
+    const dy = thumbRect.top - finalRect.top;
+    const sx = thumbRect.width / finalRect.width;
+    const sy = thumbRect.height / finalRect.height;
+
+    lightboxImage.style.transformOrigin = "top left";
+    lightboxImage.style.transition = "none";
+    lightboxImage.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
+
+    window.requestAnimationFrame(() => {
+      lightbox.classList.add("open");
+      lightboxImage.style.transition = "transform 380ms cubic-bezier(0.2, 0.7, 0.12, 1)";
+      lightboxImage.style.transform = "translate(0, 0) scale(1, 1)";
+    });
+  };
+
+  const closeLightbox = () => {
+    if (!activeThumb) {
+      hideLightbox();
+      return;
+    }
+
+    const thumbRect = activeThumb.getBoundingClientRect();
+    const finalRect = lightboxImage.getBoundingClientRect();
+    const dx = thumbRect.left - finalRect.left;
+    const dy = thumbRect.top - finalRect.top;
+    const sx = thumbRect.width / finalRect.width;
+    const sy = thumbRect.height / finalRect.height;
+
+    lightbox.classList.remove("open");
+    lightboxImage.style.transition = "transform 320ms cubic-bezier(0.4, 0, 0.2, 1)";
+    lightboxImage.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
+
+    window.setTimeout(() => {
+      hideLightbox();
+      activeThumb = null;
+    }, 320);
+  };
+
+  document.querySelectorAll(".gallery-item img").forEach((image) => {
+    image.addEventListener("click", () => openLightbox(image));
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (!event.target.closest(".lightbox-image")) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.getAttribute("aria-hidden") === "false") {
+      closeLightbox();
+    }
+  });
+};
+
 const init = async () => {
   const slug = getSlug();
   try {
     const project = await fetchProject(slug);
     renderProject(project);
+    setupGalleryLightbox();
   } catch (error) {
     console.error(error);
   }
