@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg: #090b10;
-  --bg-dark: #05070c;
-  --text: #eff4ff;
-  --muted: #aab6cb;
-  --card: rgba(18, 24, 35, 0.9);
-  --glass: rgba(23, 31, 46, 0.85);
+  --bg: #000000;
+  --bg-dark: #000000;
+  --text: #ffffff;
+  --muted: #b8b8b8;
+  --card: rgba(20, 20, 20, 0.9);
+  --glass: rgba(18, 18, 18, 0.86);
   --accent: #58a6ff;
-  --accent-soft: #1a2d4d;
+  --accent-soft: #1a1a1a;
   --shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "Manrope", "Helvetica Neue", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 12% 8%, #18263c 0%, #101827 34%, #090d16 65%, #06080e 100%);
+  background: #000000;
 }
 
 a {
@@ -55,11 +55,11 @@ main {
   gap: 24px;
   padding: 18px 24px;
   border-radius: 999px;
-  background: rgba(12, 17, 27, 0.52);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(22px) saturate(140%);
   -webkit-backdrop-filter: blur(22px) saturate(140%);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(164, 188, 230, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   margin-top: 4px;
 }
 
@@ -241,7 +241,7 @@ main {
   place-items: center;
   padding: 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, #111828 0%, #162238 54%, #111a2a 100%);
+  background: linear-gradient(145deg, #0d0d0d 0%, #161616 54%, #0e0e0e 100%);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -331,6 +331,36 @@ main {
   margin: 0;
   color: var(--muted);
   max-width: 420px;
+}
+
+main > section h1,
+main > section h2,
+main > section h3,
+main > section .timeline-meta,
+main > section .tag {
+  color: #8a8a8a;
+  transition: color 260ms ease;
+}
+
+main > section p,
+main > section li,
+main > section .lead {
+  color: #7a7a7a;
+  transition: color 260ms ease;
+}
+
+main > section.is-focused h1,
+main > section.is-focused h2,
+main > section.is-focused h3,
+main > section.is-focused .timeline-meta,
+main > section.is-focused .tag {
+  color: #ffffff;
+}
+
+main > section.is-focused p,
+main > section.is-focused li,
+main > section.is-focused .lead {
+  color: #d6d6d6;
 }
 
 .timeline-grid {
@@ -483,7 +513,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(140deg, rgba(17, 23, 34, 0.95), rgba(20, 30, 46, 0.92));
+  background: linear-gradient(140deg, rgba(18, 18, 18, 0.95), rgba(28, 28, 28, 0.9));
 }
 
 .project-card:hover {
@@ -511,7 +541,7 @@ main {
   justify-content: space-between;
   padding: 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(130deg, #04060c 0%, #0a101a 50%, #04060c 100%);
+  background: linear-gradient(130deg, #040404 0%, #0a0a0a 50%, #040404 100%);
   color: #edf3ff;
 }
 
@@ -537,7 +567,7 @@ main {
 }
 
 .modal-content {
-  background: #121a2a;
+  background: #111111;
   padding: 36px;
   border-radius: var(--radius-lg);
   width: min(520px, 90vw);
@@ -558,7 +588,7 @@ main {
   width: fit-content;
   padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(22, 31, 47, 0.95);
+  background: rgba(20, 20, 20, 0.95);
   box-shadow: 0 10px 24px rgba(10, 20, 40, 0.12);
   color: var(--text);
   font-weight: 600;
@@ -567,7 +597,7 @@ main {
 .project-hero {
   padding: 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(130deg, #111828 0%, #162136 50%, #111a2b 100%);
+  background: linear-gradient(130deg, #0f0f0f 0%, #181818 50%, #111111 100%);
   box-shadow: var(--shadow);
 }
 
@@ -579,7 +609,7 @@ main {
 .case-panel {
   padding: 34px;
   border-radius: 22px;
-  background: rgba(16, 23, 35, 0.95);
+  background: rgba(16, 16, 16, 0.95);
   box-shadow: var(--shadow);
   display: grid;
   gap: 22px;
@@ -597,7 +627,7 @@ main {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.75;
-  color: #c8d4eb;
+  color: #d0d0d0;
 }
 
 .modal-close {
@@ -666,7 +696,7 @@ main {
   gap: 0;
   padding: 12px;
   border-radius: 18px;
-  background: rgba(18, 25, 38, 0.96);
+  background: rgba(20, 20, 20, 0.96);
   box-shadow: 0 20px 50px rgba(10, 20, 40, 0.18);
   transform: translateY(var(--offset, 0px));
 }
@@ -676,7 +706,7 @@ main {
   height: 160px;
   border-radius: 14px;
   object-fit: contain;
-  background: #0f1624;
+  background: #0a0a0a;
   cursor: zoom-in;
 }
 
@@ -720,7 +750,7 @@ main {
   max-height: 75vh;
   border-radius: 18px;
   object-fit: contain;
-  background: #0f1727;
+  background: #0c0c0c;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
   will-change: transform;
 }
@@ -784,7 +814,7 @@ main {
     gap: 6px;
     padding: 10px;
     border-radius: 12px;
-    background: rgba(15, 21, 34, 0.98);
+    background: rgba(16, 16, 16, 0.98);
     box-shadow: 0 12px 30px rgba(10, 20, 40, 0.16);
   }
 
@@ -795,7 +825,7 @@ main {
   .nav a {
     padding: 10px 12px;
     border-radius: 10px;
-    background: rgba(26, 36, 54, 0.85);
+    background: rgba(30, 30, 30, 0.88);
   }
 
   .timeline-grid {

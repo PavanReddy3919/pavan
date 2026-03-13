@@ -92,6 +92,35 @@ const restoreScrollFromProject = () => {
   window.history.replaceState({}, "", cleanUrl);
 };
 
+const setupSectionFocus = () => {
+  const sections = Array.from(document.querySelectorAll("main > section"));
+  if (!sections.length) return;
+
+  const updateFocus = () => {
+    const midpoint = window.innerHeight * 0.45;
+    let closest = null;
+    let minDistance = Infinity;
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+      const distance = Math.abs(center - midpoint);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closest = section;
+      }
+    });
+
+    sections.forEach((section) => {
+      section.classList.toggle("is-focused", section === closest);
+    });
+  };
+
+  updateFocus();
+  window.addEventListener("scroll", () => requestAnimationFrame(updateFocus), { passive: true });
+  window.addEventListener("resize", () => requestAnimationFrame(updateFocus));
+};
+
 const setupTimelineFocus = () => {
   const cards = Array.from(document.querySelectorAll(".timeline-card"));
   if (!cards.length) return;
@@ -141,6 +170,7 @@ const init = async () => {
   setupScrollButtons();
   setupMobileMenu();
   setupMarquee();
+  setupSectionFocus();
 
   try {
     const [projects, timeline] = await Promise.all([
