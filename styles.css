@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg: #f5f5f7;
-  --bg-dark: #0f1115;
-  --text: #1d1d1f;
-  --muted: #6e6e73;
-  --card: rgba(255, 255, 255, 0.92);
-  --glass: rgba(255, 255, 255, 0.7);
-  --accent: #0a84ff;
-  --accent-soft: #dbe7ff;
-  --shadow: 0 30px 70px rgba(15, 18, 26, 0.12);
+  --bg: #090b10;
+  --bg-dark: #05070c;
+  --text: #eff4ff;
+  --muted: #aab6cb;
+  --card: rgba(18, 24, 35, 0.9);
+  --glass: rgba(23, 31, 46, 0.85);
+  --accent: #58a6ff;
+  --accent-soft: #1a2d4d;
+  --shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "Manrope", "Helvetica Neue", sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #f5f5f7 0%, #eff2f7 55%, #e8edf5 100%);
+  background: radial-gradient(circle at 12% 8%, #18263c 0%, #101827 34%, #090d16 65%, #06080e 100%);
 }
 
 a {
@@ -55,11 +55,12 @@ main {
   gap: 24px;
   padding: 18px 24px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
+  background: rgba(12, 17, 27, 0.52);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(164, 188, 230, 0.18);
   margin-top: 4px;
-  position: sticky;
 }
 
 .logo {
@@ -86,7 +87,7 @@ main {
   height: 42px;
   border: none;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(18, 25, 38, 0.6);
   box-shadow: 0 8px 18px rgba(15, 18, 26, 0.1);
   align-items: center;
   justify-content: center;
@@ -99,7 +100,7 @@ main {
   display: block;
   width: 18px;
   height: 2px;
-  background: #1d1d1f;
+  background: #e7eefb;
   border-radius: 2px;
 }
 
@@ -131,7 +132,7 @@ main {
 
 .secondary {
   background: var(--glass);
-  color: var(--text);
+  color: #dde7fc;
 }
 
 .cta:hover,
@@ -240,7 +241,7 @@ main {
   place-items: center;
   padding: 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, #ffffff 0%, #eff4ff 55%, #e5ecf7 100%);
+  background: linear-gradient(145deg, #111828 0%, #162238 54%, #111a2a 100%);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -304,7 +305,7 @@ main {
   aspect-ratio: 4 / 5;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(15, 18, 24, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
 }
 
 .photo-frame img {
@@ -335,11 +336,12 @@ main {
 .timeline-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(0, auto);
-  gap: 80px 60px;
-  padding: 24px 0 64px;
-  max-width: 980px;
+  column-gap: 130px;
+  row-gap: 72px;
+  padding: 20px 0 64px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -350,7 +352,7 @@ main {
   bottom: 0;
   left: 50%;
   width: 2px;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 132, 255, 0.4) 20%, rgba(10, 132, 255, 0.4) 80%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(88, 166, 255, 0.45) 20%, rgba(88, 166, 255, 0.45) 80%, transparent 100%);
   transform: translateX(-50%);
 }
 
@@ -372,46 +374,50 @@ main {
 .timeline-card {
   position: relative;
   cursor: pointer;
-  transform: scale(0.9);
-  opacity: 0.7;
-  min-height: 240px;
+  transform: scale(1);
+  opacity: 0.86;
+  min-height: 210px;
+  width: min(100%, 500px);
+  border: 1px solid rgba(130, 155, 198, 0.22);
 }
 
 .timeline-card.is-active {
-  transform: scale(1.05);
+  transform: scale(1.02);
   opacity: 1;
-  box-shadow: 0 32px 80px rgba(10, 20, 40, 0.2);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.35);
 }
 
 .timeline-card.left {
   grid-column: 1;
   grid-row: var(--row);
-  margin-right: 24px;
+  justify-self: end;
+  margin-right: 0;
 }
 
 .timeline-card.right {
   grid-column: 2;
   grid-row: var(--row);
-  margin-left: 24px;
+  justify-self: start;
+  margin-left: 0;
 }
 
 .timeline-grid .timeline-card::before {
   content: "";
   position: absolute;
-  top: 26px;
+  top: 28px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(10, 132, 255, 0.18);
+  box-shadow: 0 0 0 6px rgba(88, 166, 255, 0.2);
 }
 
 .timeline-grid .timeline-card.left::before {
-  right: -36px;
+  right: -72px;
 }
 
 .timeline-grid .timeline-card.right::before {
-  left: -36px;
+  left: -72px;
 }
 
 .timeline-card h3,
@@ -428,6 +434,10 @@ main {
 
 .timeline-preview {
   margin-top: 6px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .timeline-details {
@@ -451,7 +461,7 @@ main {
 }
 
 .timeline-card.is-expanded {
-  transform: scale(1.02);
+  transform: scale(1);
   opacity: 1;
 }
 
@@ -473,7 +483,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.98), rgba(232, 239, 250, 0.9));
+  background: linear-gradient(140deg, rgba(17, 23, 34, 0.95), rgba(20, 30, 46, 0.92));
 }
 
 .project-card:hover {
@@ -501,8 +511,8 @@ main {
   justify-content: space-between;
   padding: 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(130deg, #0f1115 0%, #151923 50%, #0f1115 100%);
-  color: #f6f7fb;
+  background: linear-gradient(130deg, #04060c 0%, #0a101a 50%, #04060c 100%);
+  color: #edf3ff;
 }
 
 .contact a {
@@ -527,7 +537,7 @@ main {
 }
 
 .modal-content {
-  background: #ffffff;
+  background: #121a2a;
   padding: 36px;
   border-radius: var(--radius-lg);
   width: min(520px, 90vw);
@@ -548,7 +558,7 @@ main {
   width: fit-content;
   padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(22, 31, 47, 0.95);
   box-shadow: 0 10px 24px rgba(10, 20, 40, 0.12);
   color: var(--text);
   font-weight: 600;
@@ -557,7 +567,7 @@ main {
 .project-hero {
   padding: 40px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(130deg, #ffffff 0%, #eef2f8 50%, #e2e8f3 100%);
+  background: linear-gradient(130deg, #111828 0%, #162136 50%, #111a2b 100%);
   box-shadow: var(--shadow);
 }
 
@@ -569,7 +579,7 @@ main {
 .case-panel {
   padding: 34px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(16, 23, 35, 0.95);
   box-shadow: var(--shadow);
   display: grid;
   gap: 22px;
@@ -587,7 +597,7 @@ main {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.75;
-  color: #42464f;
+  color: #c8d4eb;
 }
 
 .modal-close {
@@ -656,7 +666,7 @@ main {
   gap: 0;
   padding: 12px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(18, 25, 38, 0.96);
   box-shadow: 0 20px 50px rgba(10, 20, 40, 0.18);
   transform: translateY(var(--offset, 0px));
 }
@@ -666,7 +676,7 @@ main {
   height: 160px;
   border-radius: 14px;
   object-fit: contain;
-  background: #ffffff;
+  background: #0f1624;
   cursor: zoom-in;
 }
 
@@ -710,7 +720,7 @@ main {
   max-height: 75vh;
   border-radius: 18px;
   object-fit: contain;
-  background: #fff;
+  background: #0f1727;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
   will-change: transform;
 }
@@ -774,7 +784,7 @@ main {
     gap: 6px;
     padding: 10px;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(15, 21, 34, 0.98);
     box-shadow: 0 12px 30px rgba(10, 20, 40, 0.16);
   }
 
@@ -785,12 +795,12 @@ main {
   .nav a {
     padding: 10px 12px;
     border-radius: 10px;
-    background: rgba(240, 244, 252, 0.7);
+    background: rgba(26, 36, 54, 0.85);
   }
 
   .timeline-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 26px;
     padding-left: 18px;
     max-width: 100%;
   }
@@ -803,6 +813,8 @@ main {
   .timeline-card.right {
     grid-column: 1;
     margin: 0 0 0 24px;
+    justify-self: stretch;
+    width: auto;
   }
 
   .timeline-grid .timeline-card.left::before,
