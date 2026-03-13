@@ -115,11 +115,17 @@ main {
 .cta,
 .primary,
 .secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   cursor: pointer;
   padding: 12px 22px;
   border-radius: 999px;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  min-height: 46px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
@@ -218,6 +224,7 @@ main {
 
 .biosphere-logo {
   height: 48px;
+  filter: brightness(0) invert(1);
 }
 
 .stats {
@@ -333,34 +340,16 @@ main {
   max-width: 420px;
 }
 
-main > section h1,
-main > section h2,
-main > section h3,
-main > section .timeline-meta,
-main > section .tag {
-  color: #8a8a8a;
-  transition: color 260ms ease;
-}
-
-main > section p,
-main > section li,
-main > section .lead {
-  color: #7a7a7a;
-  transition: color 260ms ease;
-}
-
-main > section.is-focused h1,
-main > section.is-focused h2,
-main > section.is-focused h3,
-main > section.is-focused .timeline-meta,
-main > section.is-focused .tag {
-  color: #ffffff;
-}
-
-main > section.is-focused p,
-main > section.is-focused li,
-main > section.is-focused .lead {
-  color: #d6d6d6;
+main h1,
+main h2,
+main h3,
+main p,
+main li,
+main .timeline-meta,
+main .tag,
+main .lead,
+main .eyebrow {
+  transition: color 320ms ease;
 }
 
 .timeline-grid {
@@ -404,16 +393,31 @@ main > section.is-focused .lead {
 .timeline-card {
   position: relative;
   cursor: pointer;
-  transform: scale(1);
   opacity: 0.86;
-  min-height: 210px;
   width: min(100%, 500px);
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.timeline-card-inner {
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow);
   border: 1px solid rgba(130, 155, 198, 0.22);
+  min-height: 210px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
 }
 
 .timeline-card.is-active {
-  transform: scale(1.02);
   opacity: 1;
+}
+
+.timeline-card.is-active .timeline-card-inner {
+  transform: scale(1.02);
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.35);
 }
 
@@ -491,8 +495,11 @@ main > section.is-focused .lead {
 }
 
 .timeline-card.is-expanded {
-  transform: scale(1);
   opacity: 1;
+}
+
+.timeline-card.is-expanded .timeline-card-inner {
+  transform: scale(1);
 }
 
 .timeline-meta {

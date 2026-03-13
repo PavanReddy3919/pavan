@@ -40,11 +40,13 @@ const renderTimeline = (items) => {
         : "";
       return `
         <article class="timeline-card ${side}" style="--row:${index + 1}">
-          <div class="timeline-meta">${item.period}</div>
-          <h3>${item.role}</h3>
-          <p><strong>${item.company}</strong></p>
-          ${preview ? `<p class="timeline-preview">${preview}</p>` : ""}
-          ${details}
+          <div class="timeline-card-inner">
+            <div class="timeline-meta">${item.period}</div>
+            <h3>${item.role}</h3>
+            <p><strong>${item.company}</strong></p>
+            ${preview ? `<p class="timeline-preview">${preview}</p>` : ""}
+            ${details}
+          </div>
         </article>
       `;
     })
@@ -92,33 +94,63 @@ const restoreScrollFromProject = () => {
   window.history.replaceState({}, "", cleanUrl);
 };
 
-const setupSectionFocus = () => {
-  const sections = Array.from(document.querySelectorAll("main > section"));
-  if (!sections.length) return;
+const setupViewportTextFocus = () => {
+  const selector =
+    "main h1, main h2, main h3, main p, main li, main .timeline-meta, main .tag, main .lead, main .eyebrow";
+  let targets = [];
+  let rafId = null;
+
+  const refreshTargets = () => {
+    targets = Array.from(document.querySelectorAll(selector));
+  };
+
+  const clamp01 = (value) => Math.max(0, Math.min(1, value));
+  const lerp = (a, b, t) => Math.round(a + (b - a) * t);
+  const smoothstep = (edge0, edge1, x) => {
+    const t = clamp01((x - edge0) / (edge1 - edge0));
+    return t * t * (3 - 2 * t);
+  };
+
+  // Center 60% of viewport stays bright; top/bottom 20% softly fade to grey.
+  const focusFactor = (yNorm) => {
+    const distanceFromCenter = Math.abs(yNorm - 0.5);
+    if (distanceFromCenter <= 0.3) return 1;
+    return 1 - smoothstep(0.3, 0.5, distanceFromCenter);
+  };
 
   const updateFocus = () => {
-    const midpoint = window.innerHeight * 0.45;
-    let closest = null;
-    let minDistance = Infinity;
-
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const center = rect.top + rect.height / 2;
-      const distance = Math.abs(center - midpoint);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closest = section;
-      }
-    });
-
-    sections.forEach((section) => {
-      section.classList.toggle("is-focused", section === closest);
+    if (!targets.length) return;
+    const vh = window.innerHeight || 1;
+    targets.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const y = (rect.top + rect.height / 2) / vh;
+      const t = clamp01(focusFactor(y));
+      const r = lerp(138, 255, t);
+      const g = lerp(138, 255, t);
+      const b = lerp(138, 255, t);
+      el.style.color = `rgb(${r}, ${g}, ${b})`;
     });
   };
 
+  const requestUpdate = () => {
+    if (rafId !== null) return;
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      updateFocus();
+    });
+  };
+
+  refreshTargets();
   updateFocus();
-  window.addEventListener("scroll", () => requestAnimationFrame(updateFocus), { passive: true });
-  window.addEventListener("resize", () => requestAnimationFrame(updateFocus));
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+
+  return {
+    refreshTargets: () => {
+      refreshTargets();
+      requestUpdate();
+    },
+  };
 };
 
 const setupTimelineFocus = () => {
@@ -170,7 +202,7 @@ const init = async () => {
   setupScrollButtons();
   setupMobileMenu();
   setupMarquee();
-  setupSectionFocus();
+  const viewportFocus = setupViewportTextFocus();
 
   try {
     const [projects, timeline] = await Promise.all([
@@ -181,6 +213,7 @@ const init = async () => {
     renderProjects(projects);
     renderTimeline(timeline);
     setupTimelineFocus();
+    viewportFocus?.refreshTargets();
   } catch (error) {
     console.error(error);
   }
