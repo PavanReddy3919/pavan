@@ -3,24 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pavan M. Reddy | Portfolio</title>
+    <title>Pavan M. Reddy | Mechanical Engineer — R&amp;D &amp; Product Design</title>
+    <meta
+      name="description"
+      content="Mechanical engineer with 5+ years taking hardware from concept to production — R&D for DOD-aligned bioreactor programs, VR motion platforms, and medical oxygen systems."
+    />
+    <meta property="og:title" content="Pavan M. Reddy | Mechanical Engineer" />
+    <meta
+      property="og:description"
+      content="I build production-ready hardware systems from concept to validation."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pavanmreddy.com" />
+    <meta property="og:image" content="https://pavanmreddy.com/assets/headshot.jpg" />
+    <link rel="icon" type="image/png" href="assets/website-logo.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page">
       <header class="topbar">
-        <div class="logo">
+        <a class="logo" href="#summary" aria-label="Home">
           <img src="assets/website-logo.png" alt="Pavan M. Reddy logo" />
-        </div>
+        </a>
         <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
         <nav class="nav">
-          <a href="#summary">Summary</a>
+          <a href="#summary">About</a>
           <a href="#timeline">Experience</a>
           <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
         <a class="cta" href="project.html?slug=uv-bioreactor-biosphere">Current Work</a>
@@ -29,100 +43,73 @@
       <main>
         <section id="summary" class="hero">
           <div class="hero-text">
-            <p class="eyebrow">Mechanical Engineer • Product Design • R&amp;D</p>
-            <h1>I build production-ready hardware systems from concept to validation.</h1>
+            <p class="eyebrow">Mechanical Engineer · Product Design · R&amp;D</p>
+            <h1>I build production-ready hardware, <em>from concept to validation.</em></h1>
             <p class="lead">
-              I am a mechanical engineer with 5+ years of experience driving end-to-end product development, from
-              concept and design through prototyping, validation, and production. I have led R&amp;D programs for
-              early-stage startups and DOD initiatives, making clear engineering trade-offs to deliver robust,
-              manufacturable systems.
+              Mechanical engineer with 5+ years of experience driving end-to-end product development — concept,
+              design, prototyping, validation, and production. I've led R&amp;D programs for early-stage startups
+              and DOD initiatives, making clear engineering trade-offs to deliver robust, manufacturable systems.
             </p>
             <div class="hero-actions">
               <button class="primary" data-scroll="#projects">Explore Projects</button>
               <a class="secondary" href="#contact">Get in touch</a>
-              <div class="badge-row">
-                <div class="badge">
-                  <img class="partner-logo dod-logo" src="assets/dod.png" alt="DOD" />
-                </div>
-                <div class="badge">
-                  <img class="partner-logo berkeley-logo" src="assets/berkeley.png" alt="UC Berkeley" />
-                </div>
-                <div class="badge">
-                  <img class="partner-logo biosphere-logo" src="assets/biospherelogo.svg" alt="Biosphere" />
-                </div>
-              </div>
             </div>
             <div class="stats">
-              <div>
-                <h3>5+</h3>
+              <div class="stat-tile">
+                <h3><span data-count="5"></span><sup>+</sup></h3>
                 <p>Years in product development</p>
               </div>
-              <div>
-                <h3>3+</h3>
+              <div class="stat-tile">
+                <h3><span data-count="35"></span><sup>%</sup></h3>
+                <p>System CAPEX reduction delivered</p>
+              </div>
+              <div class="stat-tile">
+                <h3><span data-count="3"></span><sup>+</sup></h3>
                 <p>Cross-functional teams led</p>
               </div>
+            </div>
+            <div class="partner-strip">
+              <span class="strip-label">Trusted by</span>
+              <img class="partner-logo dod-logo" src="assets/dod.png" alt="Department of Defense" />
+              <img class="partner-logo berkeley-logo" src="assets/berkeley.png" alt="UC Berkeley" />
+              <img class="partner-logo biosphere-logo" src="assets/biospherelogo.svg" alt="Biosphere" />
             </div>
           </div>
 
           <div class="hero-photo">
-            <div class="skills-marquee">
+            <div class="skills-marquee" aria-hidden="true">
               <div class="marquee-row row-1">
                 <span>SolidWorks</span>
                 <span>CATIA</span>
                 <span>Onshape</span>
                 <span>Fusion 360</span>
                 <span>Autodesk Inventor</span>
-                <span>Shaper 3D</span>
-                <span>Computer-Aided Design</span>
               </div>
               <div class="marquee-row row-2">
                 <span>ANSYS</span>
-                <span>Ansys Workbench</span>
-                <span>ParaView</span>
-                <span>Simscale</span>
-                <span>FEM</span>
+                <span>FEA</span>
                 <span>GD&amp;T</span>
-                <span>Modeling &amp; Simulation</span>
+                <span>Topological Optimization</span>
+                <span>SimScale</span>
               </div>
               <div class="marquee-row row-3">
                 <span>DFMA</span>
-                <span>Sheet Metal Design</span>
+                <span>Sheet Metal</span>
                 <span>CNC</span>
                 <span>3D Printing</span>
                 <span>Rapid Prototyping</span>
-                <span>Wood Shop</span>
-                <span>Metal Shop</span>
-                <span>Design Engineering</span>
               </div>
               <div class="marquee-row row-4">
-                <span>C</span>
                 <span>Python</span>
+                <span>TensorFlow</span>
+                <span>Scikit-learn</span>
+                <span>C</span>
                 <span>Java</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Project Management</span>
               </div>
               <div class="marquee-row row-5">
-                <span>TensorFlow</span>
-                <span>Matplotlib</span>
-                <span>Scikit-learn</span>
-                <span>Keras</span>
-                <span>User-centered Design</span>
-              </div>
-              <div class="marquee-row row-6">
-                <span>Microsoft Word</span>
-                <span>Microsoft Excel</span>
-                <span>PowerPoint</span>
                 <span>Design of Experiments</span>
                 <span>Root Cause Analysis</span>
                 <span>Team Leadership</span>
-              </div>
-              <div class="marquee-row row-7">
-                <span>Topological Optimization</span>
-                <span>Manufacturing</span>
-                <span>Engineering Design</span>
-                <span>Finite Element Analysis</span>
-                <span>Design for Sterilization</span>
               </div>
             </div>
             <div class="photo-frame">
@@ -132,28 +119,124 @@
         </section>
 
         <section id="timeline" class="timeline">
-          <div class="section-title">
-            <h2>Experience</h2>
+          <div class="section-title reveal">
+            <span class="section-kicker">01 — Experience</span>
+            <h2>The journey so far.</h2>
+            <p>Scroll through the timeline — each stop is a role where I shipped real hardware.</p>
           </div>
-          <div id="timeline-grid" class="timeline-grid"></div>
+          <div id="timeline-grid" class="timeline-grid">
+            <div class="timeline-beam" aria-hidden="true"></div>
+          </div>
         </section>
 
         <section id="projects" class="projects">
-          <div class="section-title">
-            <h2>Projects</h2>
-            <p>Collection of work spanning physical products, simulations, and applied research.</p>
+          <div class="section-title reveal">
+            <span class="section-kicker">02 — Projects</span>
+            <h2>Selected work.</h2>
+            <p>Physical products, simulations, and applied research — each tile opens a full case study.</p>
           </div>
           <div id="project-grid" class="project-grid"></div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="skills" class="skills">
+          <div class="section-title reveal">
+            <span class="section-kicker">03 — Skills</span>
+            <h2>Tools of the trade.</h2>
+            <p>The capabilities I bring to every program, from first sketch to production line.</p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-tile reveal">
+              <span class="skill-index">/ 01</span>
+              <h3>CAD &amp; Design</h3>
+              <div class="chip-row">
+                <span class="chip">SolidWorks</span>
+                <span class="chip">CATIA</span>
+                <span class="chip">Onshape</span>
+                <span class="chip">Fusion 360</span>
+                <span class="chip">Autodesk Inventor</span>
+                <span class="chip">Shaper 3D</span>
+                <span class="chip">GD&amp;T</span>
+              </div>
+            </div>
+            <div class="skill-tile reveal">
+              <span class="skill-index">/ 02</span>
+              <h3>Simulation &amp; Analysis</h3>
+              <div class="chip-row">
+                <span class="chip">ANSYS Workbench</span>
+                <span class="chip">FEA</span>
+                <span class="chip">SimScale</span>
+                <span class="chip">ParaView</span>
+                <span class="chip">Topological Optimization</span>
+                <span class="chip">Tolerance Stack Analysis</span>
+              </div>
+            </div>
+            <div class="skill-tile reveal">
+              <span class="skill-index">/ 03</span>
+              <h3>Prototyping &amp; Manufacturing</h3>
+              <div class="chip-row">
+                <span class="chip">DFMA</span>
+                <span class="chip">Sheet Metal Design</span>
+                <span class="chip">CNC</span>
+                <span class="chip">3D Printing</span>
+                <span class="chip">Rapid Prototyping</span>
+                <span class="chip">Design for Sterilization</span>
+              </div>
+            </div>
+            <div class="skill-tile reveal">
+              <span class="skill-index">/ 04</span>
+              <h3>Programming &amp; ML</h3>
+              <div class="chip-row">
+                <span class="chip">Python</span>
+                <span class="chip">C</span>
+                <span class="chip">Java</span>
+                <span class="chip">TensorFlow</span>
+                <span class="chip">Keras</span>
+                <span class="chip">Scikit-learn</span>
+                <span class="chip">Matplotlib</span>
+              </div>
+            </div>
+            <div class="skill-tile reveal">
+              <span class="skill-index">/ 05</span>
+              <h3>Validation &amp; Rigor</h3>
+              <div class="chip-row">
+                <span class="chip">Design of Experiments</span>
+                <span class="chip">Root Cause Analysis</span>
+                <span class="chip">Reliability Testing</span>
+                <span class="chip">Pressure Vessel Testing</span>
+                <span class="chip">Non-Destructive Testing</span>
+              </div>
+            </div>
+            <div class="skill-tile reveal">
+              <span class="skill-index">/ 06</span>
+              <h3>Leadership</h3>
+              <div class="chip-row">
+                <span class="chip">Project Management</span>
+                <span class="chip">Team Leadership</span>
+                <span class="chip">Supplier Management</span>
+                <span class="chip">Cross-functional Reviews</span>
+                <span class="chip">User-centered Design</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact reveal">
           <div>
-            <h2>Let’s build something precise and beautiful.</h2>
-            <p>Email: <a href="mailto:pavan.reddy@berkeley.edu">pavan.reddy@berkeley.edu</a></p>
+            <span class="section-kicker">04 — Contact</span>
+            <h2>Let's build something precise and beautiful.</h2>
+            <p>
+              Email me at
+              <a class="email-link" href="mailto:pavan.reddy@berkeley.edu">pavan.reddy@berkeley.edu</a>
+            </p>
           </div>
           <button class="primary" data-scroll="#summary">Back to top</button>
         </section>
       </main>
+
+      <footer class="footer">
+        <span>© Pavan M. Reddy</span>
+        <span>Berkeley, CA — Designed &amp; built by hand</span>
+      </footer>
     </div>
 
     <script src="script.js"></script>

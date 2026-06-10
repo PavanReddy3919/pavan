@@ -30,12 +30,38 @@ const linkLabel = (value, fallback) => {
 };
 
 const renderProject = (project) => {
+  document.title = `${project.title} | Pavan M. Reddy`;
   document.getElementById("project-title").textContent = project.title;
   document.getElementById("project-tag").textContent = project.tag;
   document.getElementById("project-summary").textContent = project.summary;
 
+  const skillsRow = document.getElementById("project-skills");
+  if (skillsRow && Array.isArray(project.skills) && project.skills.length) {
+    skillsRow.innerHTML = project.skills
+      .map((skill) => `<span class="chip">${skill}</span>`)
+      .join("");
+  }
+
   const body = document.getElementById("project-body");
   let content = "";
+
+  if (Array.isArray(project.outcomes) && project.outcomes.length) {
+    content += `
+      <section class="outcomes">
+        ${project.outcomes
+          .map(
+            (outcome) => `
+              <div class="outcome-tile">
+                <span class="outcome-value">${outcome.value}</span>
+                <p>${outcome.label}</p>
+              </div>
+            `
+          )
+          .join("")}
+      </section>
+    `;
+  }
+
   const sections = Array.isArray(project.sections) && project.sections.length > 0
     ? project.sections
     : [{ title: "Overview", body: project.detail || project.summary }];
@@ -44,12 +70,15 @@ const renderProject = (project) => {
     <article class="case-panel">
       ${sections
         .map(
-          (section) => `
+          (section, index) => `
             <section class="case-block">
-              <h3>${section.title}</h3>
+              <div class="case-block-label">
+                <span class="case-block-num">${String(index + 1).padStart(2, "0")}</span>
+                <h3>${section.title}</h3>
+              </div>
               ${
                 isLink(section.body)
-                  ? `<a class="link-button" href="${section.body}" target="_blank" rel="noreferrer">${linkLabel(section.body, section.title)}</a>`
+                  ? `<div><a class="link-button" href="${section.body}" target="_blank" rel="noreferrer">${linkLabel(section.body, section.title)} ↗</a></div>`
                   : `<p>${section.body}</p>`
               }
             </section>
@@ -62,12 +91,11 @@ const renderProject = (project) => {
   if (Array.isArray(project.gallery) && project.gallery.length > 0) {
     const total = project.gallery.length;
     const isStatic = total <= 3;
-    const tiles = project.gallery.map((item, index) => {
+    const tiles = project.gallery.map((item) => {
       const src = encodeURI(item.src);
-      const offset = index % 2 === 0 ? "-16px" : "12px";
       return `
-        <figure class="gallery-item" style="--offset:${offset}">
-          <img src="${src}" alt="Project image" />
+        <figure class="gallery-item">
+          <img src="${src}" alt="${item.caption || "Project image"}" />
         </figure>
       `;
     });

@@ -6,6 +6,12 @@
     "summary": "Led mechanical design and experimental execution for next-generation UV-sterilizable bioreactor systems under Department of Defense-aligned programs.",
     "detail": "Led mechanical design and experimental execution for next-generation UV-sterilizable bioreactor systems under Department of Defense-aligned programs.",
     "link": "project.html?slug=uv-bioreactor-biosphere",
+    "skills": ["CAD Ownership", "DFMA", "Reliability Testing", "Seal & Bearing Design", "Supplier Management"],
+    "outcomes": [
+      { "value": "35%", "label": "Reduction in system CAPEX through supplier collaboration and design refinement" },
+      { "value": "DOD", "label": "Defense-aligned R&D programs delivered with measurable validation evidence" },
+      { "value": "Novel IP", "label": "New hardware architectures developed and validated through structured experimentation" }
+    ],
     "sections": [
       {
         "title": "Role Scope",
@@ -46,6 +52,12 @@
     "summary": "Developed a VR-integrated omni-directional treadmill to improve rehabilitation outcomes with precise, multi-axis motion.",
     "detail": "Objective: Build a compact, multi-directional treadmill using omni wheels and control logic that keeps users centered at all times, in collaboration with Blue Goji.",
     "link": "project.html?slug=omni-directional-treadmill",
+    "skills": ["SOLIDWORKS", "FEA", "Topological Optimization", "Rapid Prototyping"],
+    "outcomes": [
+      { "value": "44%", "label": "Height reduction of the drive system across three months of iteration" },
+      { "value": "2-axis", "label": "Planar motion achieved by combining motor speed variations" },
+      { "value": "Showcase", "label": "Presented at the Fung Institute Capstone Showcase" }
+    ],
     "sections": [
       {
         "title": "Project Objective",
@@ -82,6 +94,11 @@
     "summary": "Collaborated with HP mentors to engineer a device that strengthens connections between parents and college-bound children.",
     "detail": "Human-centered design project with HP and a Google UX designer to reconnect parents and college students through shared memories.",
     "link": "project.html?slug=rumifico-sharing-memories",
+    "skills": ["Human-centered Design", "Product Concepting", "UX Collaboration"],
+    "outcomes": [
+      { "value": "Best Overall", "label": "Award at the UC Berkeley College of Engineering Jacobs Showcase 2022" },
+      { "value": "HP + Google", "label": "Built alongside HP mentors and a Google UI/UX designer" }
+    ],
     "sections": [
       {
         "title": "Overview",
@@ -122,6 +139,12 @@
     "summary": "Designed an oxygen concentrator using PSA technology with attention to functionality, space, and aesthetics through DFMA principles.",
     "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5–8 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
     "link": "project.html?slug=oxygen-concentrator",
+    "skills": ["DFMA", "PSA Systems", "Sheet Metal Design", "Enclosure Design"],
+    "outcomes": [
+      { "value": "25 LPM", "label": "Compact PSA concentrator scaled down from a 225 LPM plant design" },
+      { "value": "7 springs", "label": "Spring plate fix eliminating zeolite wear, adopted across both projects" },
+      { "value": "Recognized", "label": "By community leaders including the Honorable central minister during the crisis" }
+    ],
     "sections": [
       {
         "title": "Mission",
@@ -194,6 +217,11 @@
     "summary": "Managed a 40+ member team to deliver a PSA oxygen plant, including non-destructive and pneumatic pressure vessel tests.",
     "detail": "Mission: Deliver large-scale hospitals an on-site PSA oxygen plant that provides continuous oxygen with minimal service needs and eliminates cylinder transport costs.",
     "link": "project.html?slug=psa-oxygen-plant",
+    "skills": ["Production Management", "Supply Chain", "Quality Assurance", "Pressure Vessel Testing"],
+    "outcomes": [
+      { "value": "40+", "label": "Team members coordinated: machinists, welders, engineers, and support staff" },
+      { "value": "On-site O2", "label": "Continuous oxygen generation, eliminating cylinder transport costs" }
+    ],
     "sections": [
       {
         "title": "Mission",
@@ -238,6 +266,7 @@
     "summary": "Designed an educational maker service with scalable, reusable project kits that teach through hands-on building.",
     "detail": "Developed a maker kit program centered on the idea that 'Nothing teaches like a project.'",
     "link": "project.html?slug=make-kit",
+    "skills": ["User Research", "Concept Generation", "Service Design"],
     "sections": [
       {
         "title": "Project Objective",
@@ -274,6 +303,11 @@
     "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
     "detail": "Research to promote open-source FSI tools for cardiovascular modeling, reducing cost and computational barriers in medical studies.",
     "link": "project.html?slug=fsi-arterial-model",
+    "skills": ["SimVascular", "ANSYS Workbench", "Python", "FSI Simulation"],
+    "outcomes": [
+      { "value": "Open source", "label": "Comparable flow-parameter outputs at significantly lower computational cost" },
+      { "value": "In publication", "label": "Academic study led at MIT Manipal, currently being published" }
+    ],
     "sections": [
       {
         "title": "Overview",
@@ -311,7 +345,8 @@
     "tag": "Research",
     "summary": "Studied gravity and Marangoni effects on boiling heat transfer using machine learning and genetic algorithms.",
     "detail": "Modeled water/2-propanol mixtures across varying gravitational conditions to identify optimized heat transfer behavior.",
-    "link": "project.html?slug=gravitational-effects-boiling-ml"
+    "link": "project.html?slug=gravitational-effects-boiling-ml",
+    "skills": ["Machine Learning", "Genetic Algorithms", "Heat Transfer"]
   },
   {
     "slug": "solar-pv-cell-optimization",
@@ -319,7 +354,8 @@
     "tag": "Research",
     "summary": "Built a neural network model to optimize PV cell organization for improved system performance.",
     "detail": "Validated the model with data and evaluated power output to identify best-performing cell combinations.",
-    "link": "project.html?slug=solar-pv-cell-optimization"
+    "link": "project.html?slug=solar-pv-cell-optimization",
+    "skills": ["Neural Networks", "Optimization", "Python"]
   },
   {
     "slug": "boiler-performance-ml",
@@ -327,7 +363,8 @@
     "tag": "Research and Analysis",
     "summary": "Developed neural network models to predict boiler performance in solar thermal power plants.",
     "detail": "Trained models on real-world data for vertical tube boiling at 4.0 MPa and evaluated operating parameter impacts.",
-    "link": "project.html?slug=boiler-performance-ml"
+    "link": "project.html?slug=boiler-performance-ml",
+    "skills": ["Neural Networks", "Thermal Systems", "Data Modeling"]
   },
   {
     "slug": "turbine-blade-heat-transfer",
@@ -335,7 +372,8 @@
     "tag": "Research",
     "summary": "Analyzed heat transfer in turbine blades via modeling and experiments on an E423 airfoil.",
     "detail": "Investigated design optimization opportunities to improve thermal efficiency under varying operating conditions.",
-    "link": "project.html?slug=turbine-blade-heat-transfer"
+    "link": "project.html?slug=turbine-blade-heat-transfer",
+    "skills": ["Heat Transfer", "Experimental Analysis", "Airfoil Modeling"]
   },
   {
     "slug": "engine-efficiency-thermal-design",
@@ -343,6 +381,7 @@
     "tag": "Design and Optimization",
     "summary": "Designed a 6-cylinder radial pneumatic engine and improved efficiency through thermal-volume optimization.",
     "detail": "Modeled the engine in Autodesk Inventor and applied thermal mechanics to refine cylinder head geometry.",
-    "link": "project.html?slug=engine-efficiency-thermal-design"
+    "link": "project.html?slug=engine-efficiency-thermal-design",
+    "skills": ["Autodesk Inventor", "Thermal Design", "Optimization"]
   }
 ]

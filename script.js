@@ -4,6 +4,8 @@ const state = {
   projects: [],
 };
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 const fetchJson = async (path) => {
   const response = await fetch(path);
   if (!response.ok) {
@@ -12,40 +14,31 @@ const fetchJson = async (path) => {
   return response.json();
 };
 
+/* ---------------------------------- */
+/*  Projects — bento grid              */
+/* ---------------------------------- */
+
 const renderProjects = (projects) => {
   if (!projectGrid) return;
   projectGrid.innerHTML = projects
-    .map(
-      (project) => `
-        <article class="project-card" data-slug="${project.slug}">
+    .map((project, index) => {
+      const featured = index === 0 ? " featured" : "";
+      const skills = Array.isArray(project.skills) && project.skills.length
+        ? `<div class="project-skills">${project.skills
+            .slice(0, 4)
+            .map((skill) => `<span class="chip">${skill}</span>`)
+            .join("")}</div>`
+        : "<div></div>";
+      return `
+        <article class="project-card${featured} reveal" data-slug="${project.slug}">
           <div>
             <span class="tag">${project.tag}</span>
             <h3>${project.title}</h3>
             <p>${project.summary}</p>
           </div>
-        </article>
-      `
-    )
-    .join("");
-};
-
-const renderTimeline = (items) => {
-  if (!timelineGrid) return;
-  timelineGrid.innerHTML = items
-    .map((item, index) => {
-      const side = index % 2 === 0 ? "left" : "right";
-      const preview = Array.isArray(item.details) && item.details.length ? item.details[0] : "";
-      const details = Array.isArray(item.details) && item.details.length
-        ? `<ul class="timeline-details">${item.details.map((d) => `<li>${d}</li>`).join("")}</ul>`
-        : "";
-      return `
-        <article class="timeline-card ${side}" style="--row:${index + 1}">
-          <div class="timeline-card-inner">
-            <div class="timeline-meta">${item.period}</div>
-            <h3>${item.role}</h3>
-            <p><strong>${item.company}</strong></p>
-            ${preview ? `<p class="timeline-preview">${preview}</p>` : ""}
-            ${details}
+          <div class="project-foot">
+            ${skills}
+            <span class="project-arrow" aria-hidden="true">→</span>
           </div>
         </article>
       `;
@@ -53,12 +46,198 @@ const renderTimeline = (items) => {
     .join("");
 };
 
+/* ---------------------------------- */
+/*  Timeline — journey beam            */
+/* ---------------------------------- */
+
+const renderTimeline = (items) => {
+  if (!timelineGrid) return;
+  const cards = items
+    .map((item, index) => {
+      const side = index % 2 === 0 ? "left" : "right";
+      const details = Array.isArray(item.details) && item.details.length
+        ? `<ul class="timeline-details">${item.details.map((d) => `<li>${d}</li>`).join("")}</ul>`
+        : "";
+      return `
+        <article class="timeline-card ${side}" style="--row:${index + 1}">
+          <div class="timeline-card-inner">
+            <span class="timeline-meta">${item.period}</span>
+            <h3>${item.role}</h3>
+            <p class="timeline-company">${item.company}</p>
+            <p class="timeline-preview">${item.summary}</p>
+            ${details}
+            ${details ? `<span class="timeline-toggle">Details</span>` : ""}
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+  timelineGrid.insertAdjacentHTML("beforeend", cards);
+};
+
+const setupTimelineBeam = () => {
+  if (!timelineGrid) return;
+  const cards = Array.from(timelineGrid.querySelectorAll(".timeline-card"));
+  if (!cards.length) return;
+
+  // click to expand/collapse
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const isExpanded = card.classList.contains("is-expanded");
+      cards.forEach((item) => item.classList.remove("is-expanded"));
+      if (!isExpanded) {
+        card.classList.add("is-expanded");
+      }
+    });
+  });
+
+  if (prefersReducedMotion) {
+    timelineGrid.style.setProperty("--beam", "100%");
+    cards.forEach((card) => card.classList.add("lit"));
+    return;
+  }
+
+  let rafId = null;
+
+  const update = () => {
+    rafId = null;
+    const rect = timelineGrid.getBoundingClientRect();
+    // the beam head tracks a point ~58% down the viewport
+    const focusY = window.innerHeight * 0.58;
+    const progress = Math.max(0, Math.min(1, (focusY - rect.top) / rect.height));
+    timelineGrid.style.setProperty("--beam", `${(progress * 100).toFixed(2)}%`);
+
+    const beamY = rect.top + rect.height * progress;
+    cards.forEach((card) => {
+      const dotY = card.getBoundingClientRect().top + 36;
+      card.classList.toggle("lit", dotY <= beamY);
+    });
+  };
+
+  const requestUpdate = () => {
+    if (rafId !== null) return;
+    rafId = requestAnimationFrame(update);
+  };
+
+  update();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+};
+
+/* ---------------------------------- */
+/*  Scroll reveals                     */
+/* ---------------------------------- */
+
+const setupReveals = () => {
+  const targets = document.querySelectorAll(".reveal");
+  if (!targets.length) return;
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("in-view"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+};
+
+/* ---------------------------------- */
+/*  Stat counters                      */
+/* ---------------------------------- */
+
+const setupCounters = () => {
+  const counters = document.querySelectorAll("[data-count]");
+  if (!counters.length) return;
+
+  const animate = (el) => {
+    const target = Number(el.dataset.count);
+    if (prefersReducedMotion || !Number.isFinite(target)) {
+      el.textContent = el.dataset.count;
+      return;
+    }
+    const duration = 1100;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = String(Math.round(target * eased));
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    counters.forEach((el) => (el.textContent = el.dataset.count));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  counters.forEach((el) => observer.observe(el));
+};
+
+/* ---------------------------------- */
+/*  Nav — active section highlight     */
+/* ---------------------------------- */
+
+const setupActiveNav = () => {
+  const links = Array.from(document.querySelectorAll(".nav a[href^='#']"));
+  if (!links.length || !("IntersectionObserver" in window)) return;
+
+  const sections = links
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  const setActive = (id) => {
+    links.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActive(visible.target.id);
+    },
+    { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.2, 0.5] }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+};
+
+/* ---------------------------------- */
+/*  Chrome                             */
+/* ---------------------------------- */
+
 const setupScrollButtons = () => {
   document.querySelectorAll("[data-scroll]").forEach((button) => {
     button.addEventListener("click", () => {
       const target = document.querySelector(button.dataset.scroll);
       if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+        target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
       }
     });
   });
@@ -82,6 +261,12 @@ const setupMobileMenu = () => {
   });
 };
 
+const setupMarquee = () => {
+  document.querySelectorAll(".marquee-row").forEach((row) => {
+    row.innerHTML = `${row.innerHTML}${row.innerHTML}`;
+  });
+};
+
 const restoreScrollFromProject = () => {
   const params = new URLSearchParams(window.location.search);
   if (params.get("return") !== "1") return;
@@ -94,115 +279,17 @@ const restoreScrollFromProject = () => {
   window.history.replaceState({}, "", cleanUrl);
 };
 
-const setupViewportTextFocus = () => {
-  const selector =
-    "main h1, main h2, main h3, main p, main li, main .timeline-meta, main .tag, main .lead, main .eyebrow";
-  let targets = [];
-  let rafId = null;
-
-  const refreshTargets = () => {
-    targets = Array.from(document.querySelectorAll(selector));
-  };
-
-  const clamp01 = (value) => Math.max(0, Math.min(1, value));
-  const lerp = (a, b, t) => Math.round(a + (b - a) * t);
-  const smoothstep = (edge0, edge1, x) => {
-    const t = clamp01((x - edge0) / (edge1 - edge0));
-    return t * t * (3 - 2 * t);
-  };
-
-  // Center 60% of viewport stays bright; top/bottom 20% softly fade to grey.
-  const focusFactor = (yNorm) => {
-    const distanceFromCenter = Math.abs(yNorm - 0.5);
-    if (distanceFromCenter <= 0.3) return 1;
-    return 1 - smoothstep(0.3, 0.5, distanceFromCenter);
-  };
-
-  const updateFocus = () => {
-    if (!targets.length) return;
-    const vh = window.innerHeight || 1;
-    targets.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      const y = (rect.top + rect.height / 2) / vh;
-      const t = clamp01(focusFactor(y));
-      const r = lerp(138, 255, t);
-      const g = lerp(138, 255, t);
-      const b = lerp(138, 255, t);
-      el.style.color = `rgb(${r}, ${g}, ${b})`;
-    });
-  };
-
-  const requestUpdate = () => {
-    if (rafId !== null) return;
-    rafId = requestAnimationFrame(() => {
-      rafId = null;
-      updateFocus();
-    });
-  };
-
-  refreshTargets();
-  updateFocus();
-  window.addEventListener("scroll", requestUpdate, { passive: true });
-  window.addEventListener("resize", requestUpdate);
-
-  return {
-    refreshTargets: () => {
-      refreshTargets();
-      requestUpdate();
-    },
-  };
-};
-
-const setupTimelineFocus = () => {
-  const cards = Array.from(document.querySelectorAll(".timeline-card"));
-  if (!cards.length) return;
-
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      const isExpanded = card.classList.contains("is-expanded");
-      cards.forEach((item) => item.classList.remove("is-expanded"));
-      if (!isExpanded) {
-        card.classList.add("is-expanded");
-      }
-    });
-  });
-
-  const updateActive = () => {
-    const midpoint = window.innerHeight / 2;
-    let closest = null;
-    let closestDistance = Infinity;
-    cards.forEach((card) => {
-      const rect = card.getBoundingClientRect();
-      const cardMid = rect.top + rect.height / 2;
-      const distance = Math.abs(cardMid - midpoint);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closest = card;
-      }
-    });
-
-    cards.forEach((card) => {
-      card.classList.toggle("is-active", card === closest);
-    });
-  };
-
-  updateActive();
-  window.addEventListener("scroll", () => requestAnimationFrame(updateActive), { passive: true });
-  window.addEventListener("resize", () => requestAnimationFrame(updateActive));
-};
-
-const setupMarquee = () => {
-  document.querySelectorAll(".marquee-row").forEach((row) => {
-    row.innerHTML = `${row.innerHTML}${row.innerHTML}`;
-  });
-};
+/* ---------------------------------- */
+/*  Init                               */
+/* ---------------------------------- */
 
 const init = async () => {
   restoreScrollFromProject();
   setupScrollButtons();
   setupMobileMenu();
   setupMarquee();
-  const viewportFocus = setupViewportTextFocus();
+  setupCounters();
+  setupActiveNav();
 
   try {
     const [projects, timeline] = await Promise.all([
@@ -212,11 +299,12 @@ const init = async () => {
     state.projects = projects;
     renderProjects(projects);
     renderTimeline(timeline);
-    setupTimelineFocus();
-    viewportFocus?.refreshTargets();
+    setupTimelineBeam();
   } catch (error) {
     console.error(error);
   }
+
+  setupReveals();
 
   projectGrid?.addEventListener("click", (event) => {
     const card = event.target.closest(".project-card");
@@ -227,7 +315,6 @@ const init = async () => {
       window.location.href = project.link;
     }
   });
-
 };
 
 init();
