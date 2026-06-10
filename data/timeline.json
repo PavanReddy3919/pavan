@@ -3,15 +3,18 @@
     "role": "Mechanical Engineer (R&D)",
     "company": "Biosphere",
     "period": "Jul 2023 \u2014 Present",
-    "summary": "Technical owner for next-generation UV bioreactor hardware on DOD-funded programs — set the architecture, drove validation strategy, owned supplier relationships, and cut system CAPEX by 35%.",
+    "summary": "Three years of R&D reinventing bioreactor sterilization around UV light — owned the mechanical design, materials, and reliability of the impeller-seal system, ran the design-of-experiments, and scaled the work from benchtop to a $9M DOD pilot.",
     "link": "project.html?slug=oxygen-concentrator",
     "details": [
       "Performed engineering design, testing, and validation of patents for novel UV technology.",
       "Led and owned CAD, DFMA, and tolerance stack analysis to ensure manufacturability and repeatable assembly.",
       "Architected and validated rotating electromechanical subsystems under corrosive, sterile, and reliability-critical constraints, including material selection, bearing & seal interfaces, and shaft scoring failure mitigation strategies.",
       "Led cross-functional design reviews and executed reliability and performance test plans, using data-driven analysis to identify risks, debug failures, and drive design iteration for DOD-funded programs.",
-      "Served as technical owner for external suppliers, partnering with operations and sourcing teams to refine designs, control tolerances, and achieve over 35% reduction in system CAPEX.",
-      "Drove the end-to-end engineering workflow spanning hypothesis generation, experimental design, data analysis, and iterative mechanical design improvements validated through testing."
+      "Owned the supply chain for the program — sourcing, supplier coordination, and logistics — cutting system cost ~35% and lead time 40–45% by reducing the number of manufacturing steps.",
+      "Improved impeller performance ~35% and cut heat generation ~20%, validated over 10,000+ hours of reliability testing on the seal and bearing system.",
+      "Built a vision + ML system that detects foaming inside the running reactor and triggers antifoam dosing automatically, removing the need for an on-site operator.",
+      "Translated the benchtop reactor into a pilot-scale design and led phase-one validation for a follow-on DOD program funded at $9M.",
+      "Drove the end-to-end R&D workflow spanning hypothesis, experimental design, data analysis, and iterative mechanical design validated through testing."
     ]
   },
   {

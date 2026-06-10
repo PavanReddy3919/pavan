@@ -1,37 +1,53 @@
 [
   {
     "slug": "uv-bioreactor-biosphere",
-    "title": "UV Bioreactor - Biosphere",
+    "title": "UV-Sterilized Bioreactor — Biosphere",
     "tag": "Research and Development",
-    "summary": "Owned the mechanical design and validation of next-generation UV-sterilizable bioreactors on DOD-funded programs — from architecture and supplier strategy to novel IP, cutting system CAPEX 35%.",
-    "detail": "Technical owner of next-generation UV-sterilizable bioreactor hardware for DOD-aligned programs — architecture, validation strategy, supplier management, and new IP.",
+    "summary": "Three years of R&D reinventing how a bioreactor stays sterile — using UV light instead of steam. I owned the mechanical design, materials, and reliability work behind the reactor and its impeller-seal system, then helped scale it from a bench prototype to a $9M DOD pilot.",
+    "detail": "R&D on UV-based sterilization for bioreactors at Biosphere — mechanical design, materials and surface engineering, design of experiments, and scale-up from benchtop to pilot.",
     "link": "project.html?slug=uv-bioreactor-biosphere",
-    "skills": ["CAD Ownership", "DFMA", "Reliability Testing", "Seal & Bearing Design", "Supplier Management"],
+    "skills": ["Mechanical Design", "Materials & Surface Engineering", "Seal & Bearing Systems", "Design of Experiments", "Scale-Up", "Supply Chain"],
     "outcomes": [
-      { "value": "35%", "label": "Reduction in system CAPEX through supplier collaboration and design refinement" },
-      { "value": "DOD", "label": "Defense-aligned R&D programs delivered with measurable validation evidence" },
-      { "value": "Novel IP", "label": "New hardware architectures developed and validated through structured experimentation" }
+      { "value": "35%", "label": "Lower system cost than the existing industry-standard sterilizable reactor" },
+      { "value": "10,000+ hrs", "label": "Reliability testing logged on the impeller and seal system" },
+      { "value": "$9M", "label": "Follow-on DOD pilot program the benchtop work was scaled into" }
     ],
     "sections": [
       {
-        "title": "Role Scope",
-        "body": "At Biosphere (Arcology), I led mechanical design and experimental execution for next-generation UV-sterilizable bioreactor systems developed under Department of Defense-aligned programs. My role focused on translating system-level objectives into manufacturable hardware by defining architectures, owning critical component and subsystem design, and structuring validation strategies that ensured performance, sterility, and reliability at scale."
+        "title": "The Problem",
+        "body": "Bioreactors are normally sterilized with steam, which constrains how they're built and run. The program I worked on set out to reinvent that around UV light — which meant rethinking the mechanical design, the materials, and every internal surface so the whole vessel could be sterilized by light, with nothing left to harbor organisms. It was research-driven product design: developing new sterilization and manufacturing methods from first principles, not adapting an existing reactor."
       },
       {
-        "title": "Core Engineering Work",
-        "body": "I drove the design of core assemblies, including impeller, shaft, seal, and vessel interface systems, with emphasis on UV compatibility, aseptic operation, material durability, and long-term reliability. This included first-principles analysis, detailed CAD ownership, materials and surface engineering decisions, supplier coordination, and experimental frameworks that linked component behavior directly to process outcomes."
+        "title": "What I Owned",
+        "body": "Over roughly three years I took on multiple projects, all pointing at the same goal — a scalable, manufacturable system that stays sterile under UV and costs less than the existing industry standard. I owned the mechanical design of the reactor's functional features and led the impeller and seal subsystem end to end, ran the design-of-experiments behind the validation, owned the supply chain and project documentation, and did the modeling to scale the design up."
       },
       {
-        "title": "Validation and Data Strategy",
-        "body": "I established testing throughput strategies, reliability targets, and data interpretation workflows so engineering decisions were grounded in measurable evidence rather than assumptions."
+        "title": "Reactor & Sterile-Barrier Design",
+        "body": "The first benchtop reactor was a $1.5M DOD project, and I designed most of the functional features, ports, and subsystems that go into it — all specifically for UV. That meant mechanical fixtures that prevent organism buildup at the scale of microns, gasket designs with worked-out squeeze and tolerance calculations, and assembly sequences built for repeatability and high cycle counts. Extreme tolerance requirements drove the analysis of the right gasket squeeze, the right fit, and the right order of assembly."
       },
       {
-        "title": "Cross-Functional Program Execution",
-        "body": "Beyond component design, I coordinated execution across mechanical, process, and controls teams, ensuring engineering work aligned with program deliverables and Department of Defense performance expectations. I shaped experimental roadmaps, defined success criteria, and maintained technical coherence across parallel development efforts."
+        "title": "Impeller & Seal System",
+        "body": "The core of my work: a rotating impeller that holds full sterility and pressure while the shaft spins at 3,000 RPM, with liquid, heat constraints, and a complete barrier between the inside of the reactor and the outside world — all while staying UV-sterilizable and leak-free. I ran material testing on shaft and seal candidates, designed the fittings and housings, and reduced the number of contact areas to keep it reliable. I worked directly with Omni seals, lip-seal makers, and bearing suppliers, and improved impeller performance by ~35% while cutting heat generation ~20%. The system was validated over more than 10,000 hours of testing."
       },
       {
-        "title": "Innovation and IP Contribution",
-        "body": "In parallel, I contributed to novel intellectual property by developing new hardware architectures and validating them through structured experimentation. This translated engineering insight into defensible innovations that supported both near-term program success and long-term technology differentiation."
+        "title": "Materials & Surface Engineering",
+        "body": "A lot of this came down to materials science. Surface finish drives both sterility and part life, so I worked through polishing methods and grades, vapor polishing, and electropolishing, and matched surface treatments to the job. I worked with plastics and specialty plastics, polymers and epoxies, laser cutting and welding, and ran the material analysis behind scoring prevention — stopping the surface degradation that would otherwise shorten the impeller's life. Life-cycle testing tied it all back to manufacturing reliability."
+      },
+      {
+        "title": "UV Dosage Simulation",
+        "body": "Because the whole system is sterilized by light, any shadowed region is a sterility risk. I built ray-tracing simulations inside the CAD model to confirm every internal surface receives the right UV dose, and tested that all locations hit the threshold needed to sterilize the full vessel."
+      },
+      {
+        "title": "Design of Experiments & Reliability",
+        "body": "A bioreactor is a multi-variable system — chemistry, humidity, pressure, biology, and acidity all moving at once — and finding what's going wrong is hard when you're starting from scratch. I broke the system into subsystems I could test with confidence, while keeping the combined test valid so results still held when the pieces came back together. I also increased the number of output assays per run to shorten a three-day test, designed the experiments to hold 95% confidence reliability, and worked through operator fatigue and step-count with the people running the tests — cutting validation time by 40–45%."
+      },
+      {
+        "title": "Manufacturing & Supply Chain",
+        "body": "I had full ownership of the supply chain — sourcing, connecting suppliers, running meetings, and managing the logistics — and worked with manufacturers to find the cheapest, most scalable way to build each part. Cutting the number of manufacturing steps dropped cost ~35% and lead time 40–45%. Alongside it I wrote the project and experimental-assay documentation, planned the future scope of the work, and broke it down into tasks and schedules (Gantt) so the program stayed coordinated."
+      },
+      {
+        "title": "Scale-Up",
+        "body": "The last step is going from a working benchtop system to a pilot. I translated the bench design into a pilot-scale design — handling form factor, modularity, safety, and cost so it could grow without losing what made it work — for a follow-on DOD program funded at $9M. I led the phase-one validation testing and the CAD modeling of how the form factor behaves at the larger scale while staying compact and modular."
       }
     ],
     "gallery": [
@@ -42,6 +58,42 @@
       {
         "src": "assets/biosphere-dod-reactor.jpg",
         "caption": "Reactor running DoD process"
+      }
+    ]
+  },
+  {
+    "slug": "antifoam-detection-ml",
+    "title": "Antifoam Detection — Vision + ML",
+    "tag": "R&D · Machine Learning",
+    "summary": "Built a camera-and-ML system that watches inside a live bioreactor and releases antifoam at exactly the right moment — turning a failure that can scrap a run worth thousands to millions into a hands-off safety system.",
+    "detail": "A vision + ML pipeline that detects foaming inside a running bioreactor and triggers antifoam dosing automatically — built end to end, from the hardware that captures the image to the model that reads it.",
+    "link": "project.html?slug=antifoam-detection-ml",
+    "skills": ["Computer Vision", "Dataset Engineering", "Hardware Integration", "Image Pipeline", "Fine-Tuning"],
+    "outcomes": [
+      { "value": "$2.5k–$M+", "label": "Cost of a single foam-out — from a bench run to a full-scale reactor — that the system prevents" },
+      { "value": "Operator-free", "label": "Runs autonomously at sites with no operator present, the constraint that made it necessary" },
+      { "value": "10 → 50", "label": "Real images expanded through augmentation into enough labeled data to train on" }
+    ],
+    "sections": [
+      {
+        "title": "The Problem",
+        "body": "Foaming is one of the failure modes that can ruin an entire bioreactor run. On a small bench reactor that's roughly $2,500; at full scale it can be millions of dollars. For the DOD program these reactors had to run in locations with no operators on site, so foam control couldn't depend on someone watching — it had to be automatic, and it had to be right. It was one of the things that keeps an operations team up at night."
+      },
+      {
+        "title": "Seeing Inside the Reactor",
+        "body": "The hard part is just getting a usable image inside a sealed, pressurized, sterile vessel. I worked through the options — putting a camera in the head plate behind a simple viewport versus building a glass vessel — and evaluated how the project had to be set up to get a clear, repeatable image without compromising sterility or pressure. Then I designed the hardware path to capture it."
+      },
+      {
+        "title": "Building the Dataset",
+        "body": "I captured images across conditions, labeled them, and extracted the labels into a usable training set. With only a small number of real images, I leaned on augmentation to expand the data — turning on the order of 10 real data points into roughly 50 — so there was enough labeled data to actually train on."
+      },
+      {
+        "title": "The Model & Pipeline",
+        "body": "I took a pre-trained image model and fine-tuned it for this specific detection task, then built the full pipeline around it: image capture, processing, inference, and the decision logic. The system reads each frame, recognizes when foam is forming, and triggers antifoam dosing at the right moment to keep the run alive — including tuning how much antifoam to release and validating how well it held."
+      },
+      {
+        "title": "Why It Mattered",
+        "body": "Beyond keeping runs alive, this was the project that deepened how I integrate hardware and software: shaping the hardware so the software can see, using an existing ML model for the analysis, and driving a real physical safety action from its output. It's the clearest example of manipulating a hardware system to make software accessible — and using that to protect a process that's expensive to lose."
       }
     ]
   },
@@ -84,6 +136,37 @@
       {
         "src": "assets/blue-goji.png",
         "caption": "blue goji"
+      }
+    ]
+  },
+  {
+    "slug": "ots-parts-copilot",
+    "title": "Off-the-Shelf Parts Copilot",
+    "tag": "Side Project · Design Tooling",
+    "summary": "An Onshape tool that reads your design as you model it and points you to off-the-shelf parts that already fit — cutting custom parts, cost, and prototyping lead time before you ever commit to a design.",
+    "detail": "A design-time tool inside Onshape that recognizes what you're modeling and surfaces existing off-the-shelf parts that fit, so early prototypes lean on parts you can order in a day instead of custom-manufacturing them.",
+    "link": "project.html?slug=ots-parts-copilot",
+    "skills": ["Onshape API", "Design Automation", "Cost Reduction", "Workflow Tooling"],
+    "outcomes": [
+      { "value": "Fewer custom parts", "label": "Off-the-shelf where it fits means lower cost and no in-house manufacturing loop" },
+      { "value": "1–2 day", "label": "Vendor delivery in place of a full design-make-test cycle for early prototypes" }
+    ],
+    "sections": [
+      {
+        "title": "The Problem",
+        "body": "Engineers often can't easily tell what already exists off the shelf, so they over-engineer or design parts from scratch. That drives cost up — you can rarely beat the price of a part that's already manufactured at scale — and it adds a full loop: design the part, model it, validate it, manufacture it (3D print, or send it out and wait on lead time), get it back, assemble, and test. For early prototyping, most of that loop is avoidable."
+      },
+      {
+        "title": "The Idea",
+        "body": "A tool that lives inside Onshape and understands what you're modeling as you go. If you're designing a shaft running from a motor to a wheel, it recognizes the geometry in context and tells you there's an existing shaft close to that diameter you can drop in — surfacing the off-the-shelf options right at the moment you're making the decision, instead of after you've already designed a custom part."
+      },
+      {
+        "title": "Why It Helps",
+        "body": "Off-the-shelf parts mean one or two day delivery from most vendors instead of an in-house or overseas manufacturing cycle. In the startup world especially, validating an early prototype with off-the-shelf parts is faster and cheaper — and the value is in giving that access exactly when it's needed, as the concept is being designed, rather than leaving it as something to chase down later."
+      },
+      {
+        "title": "Where It's Going",
+        "body": "The next step is using rough sketches and diagrams — converting that imagery to estimate, before any detailed design starts, how much of a concept can be built from existing parts versus what genuinely needs to be custom. It's an ongoing side project."
       }
     ]
   },
@@ -298,20 +381,24 @@
   },
   {
     "slug": "fsi-arterial-model",
-    "title": "FSI Study of Arterial Model",
+    "title": "Cardiovascular FSI Research — SimVascular",
     "tag": "Research",
-    "summary": "Created an FSI study using open-source tools to improve accessibility for medical image modeling and simulations.",
-    "detail": "Research to promote open-source FSI tools for cardiovascular modeling, reducing cost and computational barriers in medical studies.",
+    "summary": "An ongoing line of open-source cardiovascular simulation research on SimVascular — one arterial FSI model plus two in-progress studies on patient hemodynamics and bypass-graft analysis, all aimed at making cardiovascular modeling accessible at far lower computational cost.",
+    "detail": "Open-source fluid-structure interaction research using SimVascular — an arterial model on the coupled momentum method, and two follow-on studies toward publication on patient hemodynamics and CABG graft analysis.",
     "link": "project.html?slug=fsi-arterial-model",
-    "skills": ["SimVascular", "ANSYS Workbench", "Python", "FSI Simulation"],
+    "skills": ["SimVascular", "FSI Simulation", "Hemodynamics", "Python", "ANSYS Workbench"],
     "outcomes": [
-      { "value": "Open source", "label": "Comparable flow-parameter outputs at significantly lower computational cost" },
-      { "value": "In publication", "label": "Academic study led at MIT Manipal, currently being published" }
+      { "value": "3 papers", "label": "One arterial FSI model plus two in-progress studies toward publication" },
+      { "value": "Open source", "label": "Comparable results to proprietary tools at significantly lower computational cost" }
     ],
     "sections": [
       {
         "title": "Overview",
-        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce medical costs in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model."
+        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce cost and computational barriers in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model — and the work has since grown into a small line of cardiovascular simulation research on SimVascular."
+      },
+      {
+        "title": "Ongoing Research",
+        "body": "Three studies sit on top of this work. The first is the arterial FSI model, using the coupled momentum method (CMM) together with image processing. The second, in progress, compares hemodynamics between a pulmonary-hypertension patient and a healthy patient — how the flow characteristics differ and what that tells us. The third analyzes CABG bypass grafts, comparing saphenous, mammary, and radial grafts to understand how each performs. The latter two are being prepared for publication."
       },
       {
         "title": "Tools",
