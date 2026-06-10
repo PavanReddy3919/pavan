@@ -663,6 +663,74 @@ main {
 }
 
 /* ---------------------------------- */
+/*  Process — concept to delivery      */
+/* ---------------------------------- */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.process-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.process-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(10, 132, 255, 0.35);
+  background: var(--surface-2);
+}
+
+.process-num {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 18px;
+  transition: color 0.3s ease;
+}
+
+.process-tile:hover .process-num {
+  color: var(--accent);
+}
+
+.process-tile h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.process-tile p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.93rem;
+  flex-grow: 1;
+}
+
+.process-proof {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  line-height: 1.6;
+}
+
+/* ---------------------------------- */
 /*  Skills                             */
 /* ---------------------------------- */
 
@@ -1177,7 +1245,8 @@ main {
 /* ---------------------------------- */
 
 @media (max-width: 1024px) {
-  .skills-grid {
+  .skills-grid,
+  .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1277,7 +1346,8 @@ main {
     width: 14px;
   }
 
-  .skills-grid {
+  .skills-grid,
+  .process-grid {
     grid-template-columns: 1fr;
   }
 
