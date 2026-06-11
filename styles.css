@@ -239,16 +239,13 @@ main {
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: clamp(32px, 5vw, 64px);
   align-items: center;
-  min-height: calc(100svh - 110px);
-  padding-top: clamp(20px, 4vh, 48px);
+  padding-top: clamp(28px, 6vh, 64px);
 }
 
-.hero-text {
-  align-self: center;
-}
-
+/* lift the photo tile higher than dead-center, without touching the text layout */
 .hero-photo {
-  align-self: center;
+  align-self: start;
+  margin-top: clamp(28px, 6vh, 72px);
 }
 
 .hero-text h1 {
@@ -331,7 +328,7 @@ main {
   position: relative;
   display: grid;
   place-items: center;
-  padding: clamp(36px, 5vw, 56px);
+  padding: clamp(28px, 4vw, 44px);
   border-radius: var(--radius-lg);
   background: radial-gradient(120% 120% at 30% 20%, #1a1a1f 0%, #101013 55%, #0a0a0c 100%);
   border: 1px solid var(--line);
