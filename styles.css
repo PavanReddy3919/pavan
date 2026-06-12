@@ -340,8 +340,7 @@ main {
   inset: 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  justify-content: center;
+  justify-content: space-evenly;
   opacity: 0.16;
   z-index: 1;
   pointer-events: none;
@@ -363,6 +362,11 @@ main {
 .row-3 { animation: marquee 38s linear infinite; }
 .row-4 { animation: marquee 46s linear infinite reverse; }
 .row-5 { animation: marquee 36s linear infinite; }
+.row-6 { animation: marquee 44s linear infinite reverse; }
+.row-7 { animation: marquee 40s linear infinite; }
+.row-8 { animation: marquee 48s linear infinite reverse; }
+.row-9 { animation: marquee 37s linear infinite; }
+.row-10 { animation: marquee 43s linear infinite reverse; }
 
 .photo-frame {
   position: relative;
