@@ -2,15 +2,15 @@
   {
     "role": "Mechanical Engineer (R&D)",
     "company": "Biosphere",
-    "period": "Jul 2023 \u2014 Present",
-    "summary": "Three years of R&D reinventing bioreactor sterilization around UV light — owned the mechanical design, materials, and reliability of the impeller-seal system, ran the design-of-experiments, and scaled the work from benchtop to a $9M DOD pilot.",
+    "period": "Jul 2023 - Present",
+    "summary": "Three years of R&D reinventing bioreactor sterilization around UV light, owned the mechanical design, materials, and reliability of the impeller-seal system, ran the design-of-experiments, and scaled the work from benchtop to a $9M DOD pilot.",
     "link": "project.html?slug=oxygen-concentrator",
     "details": [
       "Performed engineering design, testing, and validation of patents for novel UV technology.",
       "Led and owned CAD, DFMA, and tolerance stack analysis to ensure manufacturability and repeatable assembly.",
       "Architected and validated rotating electromechanical subsystems under corrosive, sterile, and reliability-critical constraints, including material selection, bearing & seal interfaces, and shaft scoring failure mitigation strategies.",
       "Led cross-functional design reviews and executed reliability and performance test plans, using data-driven analysis to identify risks, debug failures, and drive design iteration for DOD-funded programs.",
-      "Owned the supply chain for the program — sourcing, supplier coordination, and logistics — cutting system cost ~35% and lead time 40–45% by reducing the number of manufacturing steps.",
+      "Owned the supply chain for the program: sourcing, supplier coordination, and logistics, cutting system cost ~35% and lead time 40-45% by reducing the number of manufacturing steps.",
       "Improved impeller performance ~35% and cut heat generation ~20%, validated over 10,000+ hours of reliability testing on the seal and bearing system.",
       "Built a vision + ML system that detects foaming inside the running reactor and triggers antifoam dosing automatically, removing the need for an on-site operator.",
       "Translated the benchtop reactor into a pilot-scale design and led phase-one validation for a follow-on DOD program funded at $9M.",
@@ -20,8 +20,8 @@
   {
     "role": "Product Design Engineer",
     "company": "BlueGoji",
-    "period": "Aug 2022 \u2014 May 2023",
-    "summary": "Led the product design of a VR-integrated motion platform from concept to working prototype — ground-up architecture, 47% smaller and 34% lighter through structural optimization.",
+    "period": "Aug 2022 - May 2023",
+    "summary": "Led the product design of a VR-integrated motion platform from concept to working prototype: ground-up architecture, 47% smaller and 34% lighter through structural optimization.",
     "link": "project.html?slug=omni-directional-treadmill",
     "details": [
       "Designed ground-up mechanical architectures for a multidirectional motion platform, enabling precise, repeatable movement for a VR-integrated rehabilitation system.",
@@ -34,8 +34,8 @@
   {
     "role": "Mechanical Design Engineer",
     "company": "Dynaxcel Engineers",
-    "period": "Jun 2021 \u2014 Dec 2021",
-    "summary": "Took a medical oxygen concentrator from design into production during the COVID crisis — owned BOM, vendors, and assembly while improving compressor efficiency by 13%.",
+    "period": "Jun 2021 - Dec 2021",
+    "summary": "Took a medical oxygen concentrator from design into production during the COVID crisis, owned BOM, vendors, and assembly while improving compressor efficiency by 13%.",
     "link": "project.html?slug=oxygen-concentrator",
     "details": [
       "Designed and optimized mechanical components and assembly process, reducing overall system size by 7%.",

@@ -1,10 +1,10 @@
 [
   {
     "slug": "uv-bioreactor-biosphere",
-    "title": "UV-Sterilized Bioreactor — Biosphere",
+    "title": "UV-Sterilized Bioreactor · Biosphere",
     "tag": "Research and Development",
-    "summary": "Three years of R&D reinventing how a bioreactor stays sterile — using UV light instead of steam. I owned the mechanical design, materials, and reliability work behind the reactor and its impeller-seal system, then helped scale it from a bench prototype to a $9M DOD pilot.",
-    "detail": "R&D on UV-based sterilization for bioreactors at Biosphere — mechanical design, materials and surface engineering, design of experiments, and scale-up from benchtop to pilot.",
+    "summary": "Three years of R&D reinventing how a bioreactor stays sterile, using UV light instead of steam. I owned the mechanical design, materials, and reliability work behind the reactor and its impeller-seal system, then helped scale it from a bench prototype to a $9M DOD pilot.",
+    "detail": "R&D on UV-based sterilization for bioreactors at Biosphere: mechanical design, materials and surface engineering, design of experiments, and scale-up from benchtop to pilot.",
     "link": "project.html?slug=uv-bioreactor-biosphere",
     "skills": ["Mechanical Design", "Materials & Surface Engineering", "Seal & Bearing Systems", "Design of Experiments", "Scale-Up", "Supply Chain"],
     "outcomes": [
@@ -15,23 +15,23 @@
     "sections": [
       {
         "title": "The Problem",
-        "body": "Bioreactors are normally sterilized with steam, which constrains how they're built and run. The program I worked on set out to reinvent that around UV light — which meant rethinking the mechanical design, the materials, and every internal surface so the whole vessel could be sterilized by light, with nothing left to harbor organisms. It was research-driven product design: developing new sterilization and manufacturing methods from first principles, not adapting an existing reactor."
+        "body": "Bioreactors are normally sterilized with steam, which constrains how they're built and run. The program I worked on set out to reinvent that around UV light, which meant rethinking the mechanical design, the materials, and every internal surface so the whole vessel could be sterilized by light, with nothing left to harbor organisms. It was research-driven product design: developing new sterilization and manufacturing methods from first principles, not adapting an existing reactor."
       },
       {
         "title": "What I Owned",
-        "body": "Over roughly three years I took on multiple projects, all pointing at the same goal — a scalable, manufacturable system that stays sterile under UV and costs less than the existing industry standard. I owned the mechanical design of the reactor's functional features and led the impeller and seal subsystem end to end, ran the design-of-experiments behind the validation, owned the supply chain and project documentation, and did the modeling to scale the design up."
+        "body": "Over roughly three years I took on multiple projects, all pointing at the same goal, a scalable, manufacturable system that stays sterile under UV and costs less than the existing industry standard. I owned the mechanical design of the reactor's functional features and led the impeller and seal subsystem end to end, ran the design-of-experiments behind the validation, owned the supply chain and project documentation, and did the modeling to scale the design up."
       },
       {
         "title": "Reactor & Sterile-Barrier Design",
-        "body": "The first benchtop reactor was a $1.5M DOD project, and I designed most of the functional features, ports, and subsystems that go into it — all specifically for UV. That meant mechanical fixtures that prevent organism buildup at the scale of microns, gasket designs with worked-out squeeze and tolerance calculations, and assembly sequences built for repeatability and high cycle counts. Extreme tolerance requirements drove the analysis of the right gasket squeeze, the right fit, and the right order of assembly."
+        "body": "The first benchtop reactor was a $1.5M DOD project, and I designed most of the functional features, ports, and subsystems that go into it, all specifically for UV. That meant mechanical fixtures that prevent organism buildup at the scale of microns, gasket designs with worked-out squeeze and tolerance calculations, and assembly sequences built for repeatability and high cycle counts. Extreme tolerance requirements drove the analysis of the right gasket squeeze, the right fit, and the right order of assembly."
       },
       {
         "title": "Impeller & Seal System",
-        "body": "The core of my work: a rotating impeller that holds full sterility and pressure while the shaft spins at 3,000 RPM, with liquid, heat constraints, and a complete barrier between the inside of the reactor and the outside world — all while staying UV-sterilizable and leak-free. I ran material testing on shaft and seal candidates, designed the fittings and housings, and reduced the number of contact areas to keep it reliable. I worked directly with Omni seals, lip-seal makers, and bearing suppliers, and improved impeller performance by ~35% while cutting heat generation ~20%. The system was validated over more than 10,000 hours of testing."
+        "body": "The core of my work: a rotating impeller that holds full sterility and pressure while the shaft spins at 3,000 RPM, with liquid, heat constraints, and a complete barrier between the inside of the reactor and the outside world, all while staying UV-sterilizable and leak-free. I ran material testing on shaft and seal candidates, designed the fittings and housings, and reduced the number of contact areas to keep it reliable. I worked directly with Omni seals, lip-seal makers, and bearing suppliers, and improved impeller performance by ~35% while cutting heat generation ~20%. The system was validated over more than 10,000 hours of testing."
       },
       {
         "title": "Materials & Surface Engineering",
-        "body": "A lot of this came down to materials science. Surface finish drives both sterility and part life, so I worked through polishing methods and grades, vapor polishing, and electropolishing, and matched surface treatments to the job. I worked with plastics and specialty plastics, polymers and epoxies, laser cutting and welding, and ran the material analysis behind scoring prevention — stopping the surface degradation that would otherwise shorten the impeller's life. Life-cycle testing tied it all back to manufacturing reliability."
+        "body": "A lot of this came down to materials science. Surface finish drives both sterility and part life, so I worked through polishing methods and grades, vapor polishing, and electropolishing, and matched surface treatments to the job. I worked with plastics and specialty plastics, polymers and epoxies, laser cutting and welding, and ran the material analysis behind scoring prevention, stopping the surface degradation that would otherwise shorten the impeller's life. Life-cycle testing tied it all back to manufacturing reliability."
       },
       {
         "title": "UV Dosage Simulation",
@@ -39,15 +39,15 @@
       },
       {
         "title": "Design of Experiments & Reliability",
-        "body": "A bioreactor is a multi-variable system — chemistry, humidity, pressure, biology, and acidity all moving at once — and finding what's going wrong is hard when you're starting from scratch. I broke the system into subsystems I could test with confidence, while keeping the combined test valid so results still held when the pieces came back together. I also increased the number of output assays per run to shorten a three-day test, designed the experiments to hold 95% confidence reliability, and worked through operator fatigue and step-count with the people running the tests — cutting validation time by 40–45%."
+        "body": "A bioreactor is a multi-variable system: chemistry, humidity, pressure, biology, and acidity all moving at once, and finding what's going wrong is hard when you're starting from scratch. I broke the system into subsystems I could test with confidence, while keeping the combined test valid so results still held when the pieces came back together. I also increased the number of output assays per run to shorten a three-day test, designed the experiments to hold 95% confidence reliability, and worked through operator fatigue and step-count with the people running the tests, cutting validation time by 40-45%."
       },
       {
         "title": "Manufacturing & Supply Chain",
-        "body": "I had full ownership of the supply chain — sourcing, connecting suppliers, running meetings, and managing the logistics — and worked with manufacturers to find the cheapest, most scalable way to build each part. Cutting the number of manufacturing steps dropped cost ~35% and lead time 40–45%. Alongside it I wrote the project and experimental-assay documentation, planned the future scope of the work, and broke it down into tasks and schedules (Gantt) so the program stayed coordinated."
+        "body": "I had full ownership of the supply chain: sourcing, connecting suppliers, running meetings, and managing the logistics, and worked with manufacturers to find the cheapest, most scalable way to build each part. Cutting the number of manufacturing steps dropped cost ~35% and lead time 40-45%. Alongside it I wrote the project and experimental-assay documentation, planned the future scope of the work, and broke it down into tasks and schedules (Gantt) so the program stayed coordinated."
       },
       {
         "title": "Scale-Up",
-        "body": "The last step is going from a working benchtop system to a pilot. I translated the bench design into a pilot-scale design — handling form factor, modularity, safety, and cost so it could grow without losing what made it work — for a follow-on DOD program funded at $9M. I led the phase-one validation testing and the CAD modeling of how the form factor behaves at the larger scale while staying compact and modular."
+        "body": "The last step is going from a working benchtop system to a pilot. I translated the bench design into a pilot-scale design, handling form factor, modularity, safety, and cost so it could grow without losing what made it work, for a follow-on DOD program funded at $9M. I led the phase-one validation testing and the CAD modeling of how the form factor behaves at the larger scale while staying compact and modular."
       }
     ],
     "gallery": [
@@ -63,37 +63,37 @@
   },
   {
     "slug": "antifoam-detection-ml",
-    "title": "Antifoam Detection — Vision + ML",
+    "title": "Antifoam Detection · Vision + ML",
     "tag": "R&D · Machine Learning",
-    "summary": "Built a camera-and-ML system that watches inside a live bioreactor and releases antifoam at exactly the right moment — turning a failure that can scrap a run worth thousands to millions into a hands-off safety system.",
-    "detail": "A vision + ML pipeline that detects foaming inside a running bioreactor and triggers antifoam dosing automatically — built end to end, from the hardware that captures the image to the model that reads it.",
+    "summary": "Built a camera-and-ML system that watches inside a live bioreactor and releases antifoam at exactly the right moment, turning a failure that can scrap a run worth thousands to millions into a hands-off safety system.",
+    "detail": "A vision + ML pipeline that detects foaming inside a running bioreactor and triggers antifoam dosing automatically, built end to end, from the hardware that captures the image to the model that reads it.",
     "link": "project.html?slug=antifoam-detection-ml",
     "skills": ["Computer Vision", "Dataset Engineering", "Hardware Integration", "Image Pipeline", "Fine-Tuning"],
     "outcomes": [
-      { "value": "$2.5k–$M+", "label": "Cost of a single foam-out — from a bench run to a full-scale reactor — that the system prevents" },
+      { "value": "$2.5k-$M+", "label": "Cost of a single foam-out, from a bench run to a full-scale reactor, that the system prevents" },
       { "value": "Operator-free", "label": "Runs autonomously at sites with no operator present, the constraint that made it necessary" },
       { "value": "10 → 50", "label": "Real images expanded through augmentation into enough labeled data to train on" }
     ],
     "sections": [
       {
         "title": "The Problem",
-        "body": "Foaming is one of the failure modes that can ruin an entire bioreactor run. On a small bench reactor that's roughly $2,500; at full scale it can be millions of dollars. For the DOD program these reactors had to run in locations with no operators on site, so foam control couldn't depend on someone watching — it had to be automatic, and it had to be right. It was one of the things that keeps an operations team up at night."
+        "body": "Foaming is one of the failure modes that can ruin an entire bioreactor run. On a small bench reactor that's roughly $2,500; at full scale it can be millions of dollars. For the DOD program these reactors had to run in locations with no operators on site, so foam control couldn't depend on someone watching. It had to be automatic, and it had to be right. It was one of the things that keeps an operations team up at night."
       },
       {
         "title": "Seeing Inside the Reactor",
-        "body": "The hard part is just getting a usable image inside a sealed, pressurized, sterile vessel. I worked through the options — putting a camera in the head plate behind a simple viewport versus building a glass vessel — and evaluated how the project had to be set up to get a clear, repeatable image without compromising sterility or pressure. Then I designed the hardware path to capture it."
+        "body": "The hard part is just getting a usable image inside a sealed, pressurized, sterile vessel. I worked through the options, putting a camera in the head plate behind a simple viewport versus building a glass vessel, and evaluated how the project had to be set up to get a clear, repeatable image without compromising sterility or pressure. Then I designed the hardware path to capture it."
       },
       {
         "title": "Building the Dataset",
-        "body": "I captured images across conditions, labeled them, and extracted the labels into a usable training set. With only a small number of real images, I leaned on augmentation to expand the data — turning on the order of 10 real data points into roughly 50 — so there was enough labeled data to actually train on."
+        "body": "I captured images across conditions, labeled them, and extracted the labels into a usable training set. With only a small number of real images, I leaned on augmentation to expand the data, turning on the order of 10 real data points into roughly 50, so there was enough labeled data to actually train on."
       },
       {
         "title": "The Model & Pipeline",
-        "body": "I took a pre-trained image model and fine-tuned it for this specific detection task, then built the full pipeline around it: image capture, processing, inference, and the decision logic. The system reads each frame, recognizes when foam is forming, and triggers antifoam dosing at the right moment to keep the run alive — including tuning how much antifoam to release and validating how well it held."
+        "body": "I took a pre-trained image model and fine-tuned it for this specific detection task, then built the full pipeline around it: image capture, processing, inference, and the decision logic. The system reads each frame, recognizes when foam is forming, and triggers antifoam dosing at the right moment to keep the run alive, including tuning how much antifoam to release and validating how well it held."
       },
       {
         "title": "Why It Mattered",
-        "body": "Beyond keeping runs alive, this was the project that deepened how I integrate hardware and software: shaping the hardware so the software can see, using an existing ML model for the analysis, and driving a real physical safety action from its output. It's the clearest example of manipulating a hardware system to make software accessible — and using that to protect a process that's expensive to lose."
+        "body": "Beyond keeping runs alive, this was the project that deepened how I integrate hardware and software: shaping the hardware so the software can see, using an existing ML model for the analysis, and driving a real physical safety action from its output. It's the clearest example of manipulating a hardware system to make software accessible, and using that to protect a process that's expensive to lose."
       }
     ]
   },
@@ -101,7 +101,7 @@
     "slug": "omni-directional-treadmill",
     "title": "Omni-Directional Treadmill",
     "tag": "Product Design",
-    "summary": "Led the product design team building a VR-integrated rehabilitation treadmill — concept to prototype, 44% smaller, presented at the Fung Institute Capstone Showcase.",
+    "summary": "Led the product design team building a VR-integrated rehabilitation treadmill: concept to prototype, 44% smaller, presented at the Fung Institute Capstone Showcase.",
     "detail": "Objective: Build a compact, multi-directional treadmill using omni wheels and control logic that keeps users centered at all times, in collaboration with Blue Goji.",
     "link": "project.html?slug=omni-directional-treadmill",
     "skills": ["SOLIDWORKS", "FEA", "Topological Optimization", "Rapid Prototyping"],
@@ -143,38 +143,38 @@
     "slug": "ots-parts-copilot",
     "title": "Off-the-Shelf Parts Copilot",
     "tag": "Side Project · Design Tooling",
-    "summary": "An Onshape tool that reads your design as you model it and points you to off-the-shelf parts that already fit — cutting custom parts, cost, and prototyping lead time before you ever commit to a design.",
+    "summary": "An Onshape tool that reads your design as you model it and points you to off-the-shelf parts that already fit, cutting custom parts, cost, and prototyping lead time before you ever commit to a design.",
     "detail": "A design-time tool inside Onshape that recognizes what you're modeling and surfaces existing off-the-shelf parts that fit, so early prototypes lean on parts you can order in a day instead of custom-manufacturing them.",
     "link": "project.html?slug=ots-parts-copilot",
     "skills": ["Onshape API", "Design Automation", "Cost Reduction", "Workflow Tooling"],
     "outcomes": [
       { "value": "Fewer custom parts", "label": "Off-the-shelf where it fits means lower cost and no in-house manufacturing loop" },
-      { "value": "1–2 day", "label": "Vendor delivery in place of a full design-make-test cycle for early prototypes" }
+      { "value": "1-2 day", "label": "Vendor delivery in place of a full design-make-test cycle for early prototypes" }
     ],
     "sections": [
       {
         "title": "The Problem",
-        "body": "Engineers often can't easily tell what already exists off the shelf, so they over-engineer or design parts from scratch. That drives cost up — you can rarely beat the price of a part that's already manufactured at scale — and it adds a full loop: design the part, model it, validate it, manufacture it (3D print, or send it out and wait on lead time), get it back, assemble, and test. For early prototyping, most of that loop is avoidable."
+        "body": "Engineers often can't easily tell what already exists off the shelf, so they over-engineer or design parts from scratch. That drives cost up (you can rarely beat the price of a part that's already manufactured at scale), and it adds a full loop: design the part, model it, validate it, manufacture it (3D print, or send it out and wait on lead time), get it back, assemble, and test. For early prototyping, most of that loop is avoidable."
       },
       {
         "title": "The Idea",
-        "body": "A tool that lives inside Onshape and understands what you're modeling as you go. If you're designing a shaft running from a motor to a wheel, it recognizes the geometry in context and tells you there's an existing shaft close to that diameter you can drop in — surfacing the off-the-shelf options right at the moment you're making the decision, instead of after you've already designed a custom part."
+        "body": "A tool that lives inside Onshape and understands what you're modeling as you go. If you're designing a shaft running from a motor to a wheel, it recognizes the geometry in context and tells you there's an existing shaft close to that diameter you can drop in, surfacing the off-the-shelf options right at the moment you're making the decision, instead of after you've already designed a custom part."
       },
       {
         "title": "Why It Helps",
-        "body": "Off-the-shelf parts mean one or two day delivery from most vendors instead of an in-house or overseas manufacturing cycle. In the startup world especially, validating an early prototype with off-the-shelf parts is faster and cheaper — and the value is in giving that access exactly when it's needed, as the concept is being designed, rather than leaving it as something to chase down later."
+        "body": "Off-the-shelf parts mean one or two day delivery from most vendors instead of an in-house or overseas manufacturing cycle. In the startup world especially, validating an early prototype with off-the-shelf parts is faster and cheaper, and the value is in giving that access exactly when it's needed, as the concept is being designed, rather than leaving it as something to chase down later."
       },
       {
         "title": "Where It's Going",
-        "body": "The next step is using rough sketches and diagrams — converting that imagery to estimate, before any detailed design starts, how much of a concept can be built from existing parts versus what genuinely needs to be custom. It's an ongoing side project."
+        "body": "The next step is using rough sketches and diagrams, converting that imagery to estimate, before any detailed design starts, how much of a concept can be built from existing parts versus what genuinely needs to be custom. It's an ongoing side project."
       }
     ]
   },
   {
     "slug": "rumifico-sharing-memories",
-    "title": "Rumifico — Sharing Memories",
+    "title": "Rumifico · Sharing Memories",
     "tag": "Product Development",
-    "summary": "Took a human-centered product from user research to award-winning concept with HP and a Google UX designer — Best Overall at the Jacobs Showcase 2022.",
+    "summary": "Took a human-centered product from user research to award-winning concept with HP and a Google UX designer, Best Overall at the Jacobs Showcase 2022.",
     "detail": "Human-centered design project with HP and a Google UX designer to reconnect parents and college students through shared memories.",
     "link": "project.html?slug=rumifico-sharing-memories",
     "skills": ["Human-centered Design", "Product Concepting", "UX Collaboration"],
@@ -219,8 +219,8 @@
     "slug": "oxygen-concentrator",
     "title": "Oxygen Concentrator",
     "tag": "Product Design",
-    "summary": "Co-led design of a low-cost PSA oxygen concentrator for COVID relief — concept to manufacturable product, solving real production failures with DFMA and original mechanisms.",
-    "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5–8 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
+    "summary": "Co-led design of a low-cost PSA oxygen concentrator for COVID relief: concept to manufacturable product, solving real production failures with DFMA and original mechanisms.",
+    "detail": "Mission: Address the COVID-19 oxygen shortage in India by delivering a low-cost, compact PSA oxygen concentrator for small to medium hospitals (5-8 beds). The goal was a miniature, manufacturable alternative to full-scale PSA plants.",
     "link": "project.html?slug=oxygen-concentrator",
     "skills": ["DFMA", "PSA Systems", "Sheet Metal Design", "Enclosure Design"],
     "outcomes": [
@@ -246,11 +246,11 @@
         "body": "As one of two Product Design leads, I iterated the framework around constraints including size, weight, materials, aesthetics, electronics placement, mobility, airflow, and serviceability. Designs were reviewed with the engineering team and client and approved by the Technical Director."
       },
       {
-        "title": "Key Contribution — Closure System",
+        "title": "Key Contribution: Closure System",
         "body": "To avoid welded thin sheet metal and exposed sharp edges, I developed a manufacturable closure system inspired by everyday mechanisms (CPU slide panels, angled screws in wood frames, and generator enclosures). This enabled safe, repeatable assembly for mass production."
       },
       {
-        "title": "Key Contribution — Spring Plate Fix",
+        "title": "Key Contribution: Spring Plate Fix",
         "body": "Testing revealed a small air gap at the top dish end plate that could grow over time as zeolite granules moved under cyclic pressure, increasing wear. After evaluating alternatives, I designed a compressed spring plate with seven springs to eliminate the gap as it formed. This prevented granule wear, improved efficiency, and was adopted in both projects."
       },
       {
@@ -297,7 +297,7 @@
     "slug": "psa-oxygen-plant",
     "title": "PSA Oxygen Plant",
     "tag": "Manufacturing",
-    "summary": "Ran production as manager for an on-site hospital oxygen plant — led a 40+ person team across supply chain, fabrication, quality, and delivery under tight deadlines.",
+    "summary": "Ran production as manager for an on-site hospital oxygen plant: led a 40+ person team across supply chain, fabrication, quality, and delivery under tight deadlines.",
     "detail": "Mission: Deliver large-scale hospitals an on-site PSA oxygen plant that provides continuous oxygen with minimal service needs and eliminates cylinder transport costs.",
     "link": "project.html?slug=psa-oxygen-plant",
     "skills": ["Production Management", "Supply Chain", "Quality Assurance", "Pressure Vessel Testing"],
@@ -346,7 +346,7 @@
     "slug": "make-kit",
     "title": "Make Kit",
     "tag": "Product Development",
-    "summary": "Built an educational maker service end to end — user research, concept generation, and three scalable product kits designed for real learning impact.",
+    "summary": "Built an educational maker service end to end: user research, concept generation, and three scalable product kits designed for real learning impact.",
     "detail": "Developed a maker kit program centered on the idea that 'Nothing teaches like a project.'",
     "link": "project.html?slug=make-kit",
     "skills": ["User Research", "Concept Generation", "Service Design"],
@@ -381,10 +381,10 @@
   },
   {
     "slug": "fsi-arterial-model",
-    "title": "Cardiovascular FSI Research — SimVascular",
+    "title": "Cardiovascular FSI Research · SimVascular",
     "tag": "Research",
-    "summary": "An ongoing line of open-source cardiovascular simulation research on SimVascular — one arterial FSI model plus two in-progress studies on patient hemodynamics and bypass-graft analysis, all aimed at making cardiovascular modeling accessible at far lower computational cost.",
-    "detail": "Open-source fluid-structure interaction research using SimVascular — an arterial model on the coupled momentum method, and two follow-on studies toward publication on patient hemodynamics and CABG graft analysis.",
+    "summary": "An ongoing line of open-source cardiovascular simulation research on SimVascular: one arterial FSI model plus two in-progress studies on patient hemodynamics and bypass-graft analysis, all aimed at making cardiovascular modeling accessible at far lower computational cost.",
+    "detail": "Open-source fluid-structure interaction research using SimVascular: an arterial model on the coupled momentum method, and two follow-on studies toward publication on patient hemodynamics and CABG graft analysis.",
     "link": "project.html?slug=fsi-arterial-model",
     "skills": ["SimVascular", "FSI Simulation", "Hemodynamics", "Python", "ANSYS Workbench"],
     "outcomes": [
@@ -394,11 +394,11 @@
     "sections": [
       {
         "title": "Overview",
-        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce cost and computational barriers in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model — and the work has since grown into a small line of cardiovascular simulation research on SimVascular."
+        "body": "This research promoted open-source tools for fluid-structure interaction (FSI) studies to reduce cost and computational barriers in cardiovascular care. I led the academic study at MIT Manipal, comparing standard proprietary workflows with open-source alternatives using a coronary artery model, and the work has since grown into a small line of cardiovascular simulation research on SimVascular."
       },
       {
         "title": "Ongoing Research",
-        "body": "Three studies sit on top of this work. The first is the arterial FSI model, using the coupled momentum method (CMM) together with image processing. The second, in progress, compares hemodynamics between a pulmonary-hypertension patient and a healthy patient — how the flow characteristics differ and what that tells us. The third analyzes CABG bypass grafts, comparing saphenous, mammary, and radial grafts to understand how each performs. The latter two are being prepared for publication."
+        "body": "Three studies sit on top of this work. The first is the arterial FSI model, using the coupled momentum method (CMM) together with image processing. The second, in progress, compares hemodynamics between a pulmonary-hypertension patient and a healthy patient, how the flow characteristics differ and what that tells us. The third analyzes CABG bypass grafts, comparing saphenous, mammary, and radial grafts to understand how each performs. The latter two are being prepared for publication."
       },
       {
         "title": "Tools",
